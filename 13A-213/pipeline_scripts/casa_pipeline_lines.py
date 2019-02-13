@@ -62,6 +62,17 @@ try:
     hifv_testBPdcals(weakbp=False, refantignore='')
     hifv_flagbaddef(pipelinemode="automatic")
     hifv_checkflag(pipelinemode="automatic")
+
+    # NOTE we need to flag HI absorption in the bandpass here
+    # I *think* we can run a custom bandpass cmd here and pass
+    # the name of the table to 'bpcaltable' in applycal
+
+    # bpcaltable = same as pipeline name
+    # bandpass(fillgap=# chan flagged)
+    # hifv_semiFinalBPdcals(weakbp=False, refantignore='',
+    #                       bpcaltable=bpcaltable)
+    #
+
     hifv_semiFinalBPdcals(weakbp=False, refantignore='')
     hifv_checkflag(checkflagmode='semi')
     hifv_semiFinalBPdcals(weakbp=False, refantignore='')
@@ -72,8 +83,11 @@ try:
 # Keep the following two steps in the script if cont.dat exists.
 # Otherwise we recommend to comment out the next two tasks,
 # or at least remove '*TARGET*' from the hifv_targetflag call
-    hifv_targetflag(intents='*CALIBRATE*, *TARGET*')
-    hifv_statwt(pipelinemode="automatic")
+    if os.path.exists('cont.dat'):
+        hifv_targetflag(intents='*CALIBRATE*, *TARGET*')
+        hifv_statwt(pipelinemode="automatic")
+    else:
+        hifv_targetflag(intents='*CALIBRATE*')
     hifv_plotsummary(pipelinemode="automatic")
     hif_makeimlist(nchan=-1, calmaxpix=300, intent='PHASE,BANDPASS')
     hif_makeimages(tlimit=2.0, hm_minbeamfrac=-999.0, hm_dogrowprune=True,

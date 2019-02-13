@@ -57,7 +57,7 @@ if split_lines:
     # copyfile(source_path, lines_folder + "/cont.dat")
 
     # Check for a flag template and copy if in the repo
-    # Naming conventions is 17B-162_month_day_year_lines_flags.txt
+    # Naming conventions is 13A-213_month_day_year_lines_flags.txt
     flag_filename = "{}_lines_flags.txt".format(parentdir)
     flag_path = os.path.expanduser("~/LocalGroup-VLA/13A-213/pipeline_scripts/track_flagging")
     full_flag_filename = os.path.join(flag_path, flag_filename)
