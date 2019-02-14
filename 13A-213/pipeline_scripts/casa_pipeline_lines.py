@@ -124,12 +124,12 @@ nspws = tb.getcol("NAME").shape[0]
 tb.close()
 
 # Final BP cal table now includes the stage number and step
-finalbpcal_name = glob(mySDM + '*.finalBPcal.b')
+finalbpcal_name = glob(mySDM + '*.finalBPcal.tbl')
 if len(finalbpcal_name) == 0:
     raise ValueError("Cannot find finalBPcal table name.")
 # Blindly assume we want the first name
 finalbpcal_name = finalbpcal_name[0]
-q
+
 for ii in range(nspws):
     filename = 'finalBPcal_amp_spw_' + str(ii) + '.png'
     syscommand = 'rm -rf ' + filename
