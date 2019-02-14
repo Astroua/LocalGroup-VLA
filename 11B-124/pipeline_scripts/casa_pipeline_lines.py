@@ -44,7 +44,7 @@ context.set_state('ProjectSummary', 'proposal_code', '11B-124')
 context.set_state('ProjectSummary', 'piname', 'Adam Leroy')
 
 try:
-    hifv_importdata(ocorr_mode='co', nocopy=False, vis=[mySDM],
+    hifv_importdata(ocorr_mode='co', nocopy=False, vis=[myvis],
                     createmms='automatic', asis='Receiver CalAtmosphere',
                     overwrite=False)
 # Hanning smoothing is turned off in the following step.
