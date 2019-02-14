@@ -135,7 +135,7 @@ for fil in image_files:
     shutil.move(fil, "image_outputs/")
 
 # Now make a bunch of scan plots to make it easier to identify bad data
-ms_active = mySDM
+ms_active = myvis
 
 # Plot the bandpasses per SPW as well
 bp_folder = "finalBPcal_plots"
