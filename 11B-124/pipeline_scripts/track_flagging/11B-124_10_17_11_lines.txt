@@ -1,0 +1,15 @@
+# Custom flagging for 11B-124.sb5338463.eb5670977.55851.2071834838
+
+# Flag edge channels
+spw='0~15:0~10;53~63'
+
+# Pathological amp in bandpass
+antenna='ea12'
+
+# Noisy
+antenna='ea07,ea28'
+
+# BP HI absorption
+# Check these b/c
+# spw='0:19~31'
+# spw='8:45~63'
