@@ -3,6 +3,7 @@ import os
 from glob import glob
 import shutil
 import numpy as np
+from shutil import copyfile
 
 from tasks import plotms, importasdm
 
@@ -13,6 +14,20 @@ from editIntents_EVLA import editIntents as editIntents_VLA
 
 mySDM = sys.argv[-1]
 myvis = mySDM if mySDM.endswith("ms") else mySDM + ".ms"
+
+# Look for a custom flagging script in the repo and copy over.
+parentdir = os.getcwd().split("/")[-1]
+
+flag_filename = "{}_lines_flags.txt".format(parentdir)
+flag_path = os.path.expanduser("~/LocalGroup-VLA/11B-124/pipeline_scripts/track_flagging")
+full_flag_filename = os.path.join(flag_path, flag_filename)
+
+if os.path.exists(full_flag_filename):
+    copyfile(full_flag_filename,
+             "additional_flagging.txt")
+else:
+    print("No additional flagging script found in the VLA_Lband repo"
+          " for lines.")
 
 # Before running the pipeline, convert the SDM to an MS file
 # and correct the scan intents
@@ -30,7 +45,6 @@ editIntents_VLA(msName=myvis, field='3C48', scan='1',
 # And the gain cal only has phases specified. Need amp too
 editIntents_VLA(msName=myvis, field='J0029+3456',
                 newintents='AMPLITUDE', append=True)
-
 
 # if not os.path.exists("cont.dat"):
 #     raise ValueError("The cont.dat file is not in the pipeline directory.")
