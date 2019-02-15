@@ -1,10 +1,10 @@
-# Custom flagging for 11B-124.sb5334017.eb5769266.55867.351589467595
+# Custom flagging in 11B-124.sb5334017.eb5770285.55868.35039530093
 
-# Flag edge channels
+# Flag edge channel
 mode='manual' spw='0~15:0~10;53~63'
 
 # Bad ants
-mode='manual' antenna='ea07,ea18'
+mode='manual' antenna='ea17,ea22,ea24'
 
 # Flag HI absorption regions on BP
 mode='manual' spw='0:19~31'

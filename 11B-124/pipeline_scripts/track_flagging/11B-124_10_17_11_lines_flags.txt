@@ -9,7 +9,6 @@ mode='manual' antenna='ea12'
 # Noisy
 mode='manual' antenna='ea07,ea28'
 
-# BP HI absorption
-# Check these b/c
-# spw='0:19~31'
-# spw='8:45~63'
+# Flag HI absorption regions on BP
+mode='manual' spw='0:19~31'
+mode='manual' spw='8:45~63'
