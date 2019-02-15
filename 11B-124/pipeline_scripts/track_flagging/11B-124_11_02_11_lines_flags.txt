@@ -1,10 +1,10 @@
 # Custom flagging for 11B-124.sb5334017.eb5769266.55867.351589467595
 
 # Flag edge channels
-spw='0~15:0~10;53~63'
+mode='manual' spw='0~15:0~10;53~63'
 
 # Bad ants
-antenna='ea07,ea18'
+mode='manual' antenna='ea07,ea18'
 
 # BP HI absorption
 # Check these b/c
