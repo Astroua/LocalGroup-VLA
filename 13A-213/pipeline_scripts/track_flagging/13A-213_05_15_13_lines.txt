@@ -1,0 +1,12 @@
+# Flags for line SPWs of 13A-213.sb20683830.eb21918128.56427.38029568287
+
+# 3C286 does not have strong HI absorption (see 21-SPONGE; Murray+18)
+# No need to flag the bandpass calibrator
+
+# Pipeline flags ea01, ea23, ea25. Ensure these are always flagged
+antenna='ea01,ea23,ea25'
+
+# High scatter throughout in all SPWs
+antenna='ea19'
+
+# Some flagging needed in second to last phase cal scan

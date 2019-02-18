@@ -1,0 +1,23 @@
+
+# Redefine some scan intents
+# Scans 2 and 3 need to be BP/flux/delay only (3C48)
+# Scans 4, 5, 9 need to be gain cal only (J2354-1513) 
+
+# ea01, ea02 have large delays in 1 correlation
+# scan='2' antenna='ea01'
+
+# ea26 needs flagging in the BP gain cal around 13:37
+# Same with ea28
+scan='3' antenna='ea26,ea28' timerange='<13:37:10'
+
+
+# ea01 SPW 9 poor phase solution
+# ea19 has some phase scatter in BP
+# scan='2' antenna='ea19'
+
+# Phase short gain solutions are all poor. Check which scans
+# are being used for this
+
+# One bad SPW in amp gain cal tables. Again related to what is
+# being used as the BP/flux cal
+# Appears to be SPW 5
