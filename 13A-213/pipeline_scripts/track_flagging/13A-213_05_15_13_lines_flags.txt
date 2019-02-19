@@ -28,8 +28,14 @@ mode='manual' scan='14' timerange='<10:36:10'
 
 # RFI spikes
 mode='manual' spw='3' scan='14' timerange='>10:43:30'
+mode='manual' spw='3' scan='15' timerange='>10:52:30'
 
-mode='manual' spw='5:390~500' scan='13'
+# Consistent spike across all calibration scans
+mode='manual' spw='5:390~500'
 
 mode='manual' spw='9' scan='8' timerange='<09:53:05'
 
+mode='manual' spw='3' scan='3' timerange='<09:20:20'
+
+# Flag bad baseline in SPW 7 from BP scans
+mode='manual' spw='7' antenna='ea04&&ea21'

@@ -32,7 +32,7 @@ mode='manual' scan='7' spw='4' timerange='>14:07:30'
 
 
 # High scatter in ea01 from SPW 8
-mode='manual' spw='8' antenna='ea01
+mode='manual' spw='8' antenna='ea01'
 
 # Scan 9 (gain cal) in SPW 4 has high scatter across many antennas.
 # But don't see obvious RFI spike...
@@ -43,7 +43,7 @@ mode='manual' scan='2,3' spw='5:50~60' antenna='ea13'
 # Anomalous amplitudes
 mode='manual' scan='2' timerange=">13:34:00" spw='8'
 
-mode='manual' scan='4' antenna='ea05&&ea23'timerange=">13:45:00"
+mode='manual' scan='4' antenna='ea05&&ea23' timerange=">13:45:00"
 
 mode='manual' scan='9' antenna='ea09&&ea15'
 

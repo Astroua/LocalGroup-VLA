@@ -1,0 +1,19 @@
+# Line SPW flagging for 13A-213.sb20685305.eb20706999.56398.113012800924
+
+# Scatter in ea19. Check after addressing BP flagging
+# mode='manual' antenna='ea19'
+
+# Remove HI absorption features on cals
+mode='manual' spw='0:1700~1800'
+
+# Amp scatter at begin. of BP scan
+mode='manual' scan='2' timerange='<02:47:00'
+# Bad integrations near end of scan 3
+mode='manual' scan='3' timerange='>02:56:30'
+
+mode='manual' scan='4' timerange='<03:03:10'
+mode='manual' scan='14' timerange='<04:05:40'
+
+# Amp-chan spike in SPW 1
+mode='manual' scan='3,11,15,16' spw='1:80~100'
+mode='manual' scan='10' spw='1,3'

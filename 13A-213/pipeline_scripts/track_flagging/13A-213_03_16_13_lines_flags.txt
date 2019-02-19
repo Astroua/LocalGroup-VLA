@@ -1,0 +1,54 @@
+# Line SPW flagging for 13A-213.sb14411141.eb19435215.56367.81414491898
+
+# Pipeline flags some ants
+mode='manual' antenna='ea02,ea25'
+
+# Lots of scatter in ea13 in SPW 1
+mode='manual' antenna='ea13' spw='1'
+
+# Big amplitude dip in all antennas
+mode='manual' scan='2' timerange='<19:37:30'
+
+# Weird amp vs. chan in scans 15 + 16 on source.
+# 18 looks suspect in amp time
+# Check again after fixing cal problems
+# mode='manual' scan='15,16,18'
+
+# scan 17 on gain cal also has problems (probably driving
+# the above issues)
+# mode='manual' scan='17'
+
+# And the increased scatter and weird behaviour in 17 starts
+# after ~21:03:10 in scan 14
+# mode='manual' scan='14' timerange='>21:03:10'
+# Ends in scan 20
+# mode='manual' scan='20' timerange='<21:49:50'
+
+# The above looks pathological. Remove these scans
+mode='manual' scan='15~19'
+# mode='manual' scan='13' spw='2'
+
+# High amps in scan 6 on source.
+# Also in scan 24
+# Check again after cal flagging
+# mode='manual' scan='6' spw='0' timerange='<20:01:30'
+# mode='manual' scan='24' spw='0' timerange='<22:16:30'
+
+# Amplitude spike near scan start
+mode='manual' scan='33' timerange='<23:24:40'
+
+mode='manual' scan='4' timerange='<19:49:00'
+
+# Consistent amp spike in SPW 1
+mode='manual' spw='1:0~20' scan='21~31'
+
+# SPW 2 dip in gain cal amp
+mode='manual' spw='2' scan='11' timerange='>20:40:50'
+
+# RFI spikes in SPW 3,4
+mode='manual' spw='3' scan='21' timerange='>21:58:30'
+mode='manual' spw='3' scan='22' timerange='>22:08:30'
+mode='manual' spw='3' scan='24' timerange='<22:19:30'
+mode='manual' spw='4,5' scan='10' timerange='>20:35:30'
+
+# Horrid amp time variations in parts of SPW 5, 6, 8. May need to flag all
