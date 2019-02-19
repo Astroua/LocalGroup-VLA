@@ -1,0 +1,52 @@
+
+# Redefine some scan intents
+# Scans 2 and 3 need to be BP/flux/delay only (3C48)
+# Scans 4, 5, 9 need to be gain cal only (J2354-1513) 
+
+# Phase short gain solutions are all poor. Check which scans
+# are being used for this
+
+# One bad SPW in amp gain cal tables. Again related to what is
+# being used as the BP/flux cal
+# Appears to be SPW 4. Flagged RFI spikes below
+
+# Ant 25 flagged in pipeline
+mode='manual' antenna='ea25'
+
+# Lots of scatter in ea19
+mode='manual' antenna='ea19'
+
+# ea01, ea02 have large delays in 1 correlation and large scatter
+mode='manual' antenna='ea01, ea02'
+
+# ea26 needs flagging in the BP gain cal around 13:37
+# Same with ea28
+mode='manual' scan='3' antenna='ea26,ea28' timerange='<13:37:10'
+
+# RFI spike in SPW 4 at end of scan 3
+mode='manual' scan='3' spw='4' timerange='>13:39:00'
+# And in scan 6,6
+mode='manual' scan='6' spw='4' timerange='>13:57:00'
+mode='manual' scan='6' spw='4' timerange='<13:52:30'
+mode='manual' scan='7' spw='4' timerange='>14:07:30'
+
+
+# High scatter in ea01 from SPW 8
+mode='manual' spw='8' antenna='ea01
+
+# Scan 9 (gain cal) in SPW 4 has high scatter across many antennas.
+# But don't see obvious RFI spike...
+mode='manual' spw='4' scan='9'
+
+mode='manual' scan='2,3' spw='5:50~60' antenna='ea13'
+
+# Anomalous amplitudes
+mode='manual' scan='2' timerange=">13:34:00" spw='8'
+
+mode='manual' scan='4' antenna='ea05&&ea23'timerange=">13:45:00"
+
+mode='manual' scan='9' antenna='ea09&&ea15'
+
+mode='manual' scan='2' timerange='<13:29:00'
+mode='manual' scan='4' timerange='<13:42:20'
+

@@ -1,0 +1,35 @@
+# Flags for line SPWs of 13A-213.sb20683830.eb21918128.56427.38029568287
+
+# 3C286 does not have strong HI absorption (see 21-SPONGE; Murray+18)
+# No need to flag the bandpass calibrator
+
+# Pipeline flags ea01,ea25. Ensure these are always flagged
+mode='manual' antenna='ea01,ea25'
+
+# High scatter throughout in all SPWs
+mode='manual' antenna='ea19'
+
+# Noisy at start of BP scan
+mode='manual' scan='2' timerange='<09:14:00'
+
+# Low amps in ea28 for a few integrations in scan 3
+mode='manual' scan='3' antenna='ea28' timerange='>09:20:50'
+
+# Some flagging needed in second to last phase cal scan
+# Lovely RFI spike in scan 13 (gain cal) in SPW 3 (~1612 MHz)
+mode='manual' scan='13' spw='3' timerange='>10:34:20'
+
+# Noisy integrations
+mode='manual' scan='4' timerange='<09:29:00'
+mode='manual' scan='9' timerange='<10:01:40'
+mode='manual' scan='13' timerange='<10:33:05'
+
+mode='manual' scan='14' timerange='<10:36:10'
+
+# RFI spikes
+mode='manual' spw='3' scan='14' timerange='>10:43:30'
+
+mode='manual' spw='5:390~500' scan='13'
+
+mode='manual' spw='9' scan='8' timerange='<09:53:05'
+
