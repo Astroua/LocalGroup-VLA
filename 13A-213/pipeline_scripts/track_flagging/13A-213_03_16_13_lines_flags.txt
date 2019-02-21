@@ -1,13 +1,20 @@
 # Line SPW flagging for 13A-213.sb14411141.eb19435215.56367.81414491898
+# Terrible gain solutions. Issues with all short baselines. Avoid this track.
 
 # Pipeline flags some ants
 mode='manual' antenna='ea02,ea25'
+
+# Poor delay and BP solutions
+mode='manual' antenna='ea14,ea19,ea15'
 
 # Lots of scatter in ea13 in SPW 1
 mode='manual' antenna='ea13' spw='1'
 
 # Big amplitude dip in all antennas
 mode='manual' scan='2' timerange='<19:37:30'
+
+# Added scatter from scan 3
+mode='manual' scan='3'
 
 # Weird amp vs. chan in scans 15 + 16 on source.
 # 18 looks suspect in amp time
