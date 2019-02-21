@@ -1,7 +1,4 @@
-
-# Redefine some scan intents
-# Scans 2 and 3 need to be BP/flux/delay only (3C48)
-# Scans 4, 5, 9 need to be gain cal only (J2354-1513) 
+# Line SPW flags for 13A-213.sb20493306.eb21732269.56426.55943959491
 
 # Phase short gain solutions are all poor. Check which scans
 # are being used for this
@@ -23,20 +20,11 @@ mode='manual' antenna='ea01, ea02'
 # Same with ea28
 mode='manual' scan='3' antenna='ea26,ea28' timerange='<13:37:10'
 
-# RFI spike in SPW 4 at end of scan 3
-mode='manual' scan='3' spw='4' timerange='>13:39:00'
-# And in scan 6,6
-mode='manual' scan='6' spw='4' timerange='>13:57:00'
-mode='manual' scan='6' spw='4' timerange='<13:52:30'
-mode='manual' scan='7' spw='4' timerange='>14:07:30'
-
+# RFI spikes in SPW 4 throughout most scans.
+mode='manual' spw='4'
 
 # High scatter in ea01 from SPW 8
 mode='manual' spw='8' antenna='ea01'
-
-# Scan 9 (gain cal) in SPW 4 has high scatter across many antennas.
-# But don't see obvious RFI spike...
-mode='manual' spw='4' scan='9'
 
 mode='manual' scan='2,3' spw='5:50~60' antenna='ea13'
 
@@ -49,4 +37,35 @@ mode='manual' scan='9' antenna='ea09&&ea15'
 
 mode='manual' scan='2' timerange='<13:29:00'
 mode='manual' scan='4' timerange='<13:42:20'
+
+mode='manual' scan='6,7' antenna='ea03' spw='1,2'
+
+# ea23 causing weird spikes across multiple SPW in certain
+# baselines. Just get rid of it...
+mode='manual' scan='6,7' antenna='ea23'
+
+mode='manual' scan='6,9' timerange='>13:58:30'
+mode='manual' scan='7' timerange='>14:07:30'
+mode='manual' scan='7,9' timerange='<14:00:40'
+
+
+# Consistent scatter throughout
+mode='manual' antenna='ea13' spw='1,2'
+
+# Lots of uv scatter in scan 2 of SPW 5,6
+# Only use scan 3 for BP/delay
+mode='manual' scan='2' spw='5,6'
+
+# Constant RFI in SPW 6
+# And it's mostly in the short baselines...
+# Chans 380~500 are badly affected but the rest isn't
+# great either
+mode='manual' spw='6'
+
+# Similar problems in spw 8
+mode='manual' spw='8'
+
+# Weird uv amp structures
+mode='manual' antenna='ea23,ea24' spw='8'
+
 
