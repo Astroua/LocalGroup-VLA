@@ -1,0 +1,22 @@
+# Line SPW flagging for 13A-213.sb20685305.eb20820921.56405.00397291667
+
+# Flag unused 3C286 scan
+mode='manual' field='4'
+
+# Poor amp time gain cal solutions
+mode='manual' antenna='ea28'
+
+# Lots of uv amp scatter
+mode='manual' antenna='ea19'
+
+# Some HI BP absorption
+mode='manual' spw='0:1680~1820'
+
+mode='manual' scan='2' timerange='<00:09:00'
+mode='manual' scan='4' timerange='<00:25:10'
+mode='manual' scan='6' timerange='<00:31:30'
+
+mode='manual' scan='3' antenna='ea10'
+
+mode='manual' spw='3' antenna='ea01&&ea02'
+
