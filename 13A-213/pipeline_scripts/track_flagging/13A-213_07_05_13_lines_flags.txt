@@ -1,0 +1,29 @@
+# Line SPW flagging for 13A-213.sb23939073.eb24079539.56478.88506108796
+
+mode='manual' scan='2' timerange='<21:18:00'
+mode='manual' scan='3' timerange='<21:25:20'
+
+# Weird uv scatter in parts of scan 3
+mode='manual' scan='3' timerange='>21:26:20'
+
+# Severe artifacts in the 3C286 scan. Not used here
+mode='manual' scan='30'
+
+# Lots of uv scatter
+mode='manual' antenna='ea19'
+
+# Horrible gain solutions
+mode='manual' antenna='ea27'
+
+# Some HI BP absorption
+mode='manual' spw='0:1680~1820'
+
+mode='manual' scan='4' timerange='<21:34:00'
+mode='manual' scan='20' timerange='<23:26:30'
+mode='manual' scan='26' timerange='<00:10:30'
+
+# Horrid RFI
+mode='manual' scan='6,9'
+
+mode='manual' scan='24' timerange='<23:52:00'
+
