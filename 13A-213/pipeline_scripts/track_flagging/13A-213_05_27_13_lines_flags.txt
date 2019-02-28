@@ -1,0 +1,41 @@
+# Line SPW flagging for 13A-213.sb20493306.eb23015836.56439.524362592594
+
+# High scatter in BP scans
+mode='manual' antenna='ea19'
+
+# 3C138 scan has significant scatter and we don't need it
+# w/o the continuum
+mode='manual' scan='18'
+
+# Flag last gain cal scan in ea04
+mode='manual' antenna='ea04' scan='17'
+
+mode='manual' scan='2' timerange='<12:38:30'
+
+# Need a bit more flagged in scan 2 for SPW 4
+mode='manual' scan='2' timerange='<12:39:30'
+
+mode='manual' scan='4' timerange='<12:52:20'
+
+# Large scatter
+mode='manual' scan='7,10,11,14,15,16' antenna='ea11'
+mode='manual' scan='12,16' antenna='ea03'
+mode='manual' scan='14' antenna='ea16,ea06'
+
+
+mode='manual' antenna='ea05&&ea23'
+mode='manual' antenna='ea06&&ea13' spw='1'
+
+mode='manual' antenna='ea13' spw='2'
+
+# Consistent RFI scatter in SPW 6
+mode='manual' spw='6:460~520'
+mode='manual' spw='6' scan='6,7'
+
+mode='manual' scan='7' antenna='ea03'
+mode='manual' scan='7' antenna='ea13&&ea16'
+mode='manual' scan='10' antenna='ea16,ea06'
+
+mode='manual' scan='3' antenna='ea10' spw='1,6,7,8'
+
+mode='manual' antenna='ea15,ea16' spw='4'

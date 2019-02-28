@@ -1,0 +1,71 @@
+# Line SPW flags for 13A-213.sb20493306.eb21732269.56426.55943959491
+
+# Phase short gain solutions are all poor. Check which scans
+# are being used for this
+
+# One bad SPW in amp gain cal tables. Again related to what is
+# being used as the BP/flux cal
+# Appears to be SPW 4. Flagged RFI spikes below
+
+# Ant 25 flagged in pipeline
+mode='manual' antenna='ea25'
+
+# Lots of scatter in ea19
+mode='manual' antenna='ea19'
+
+# ea01, ea02 have large delays in 1 correlation and large scatter
+mode='manual' antenna='ea01, ea02'
+
+# ea26 needs flagging in the BP gain cal around 13:37
+# Same with ea28
+mode='manual' scan='3' antenna='ea26,ea28' timerange='<13:37:10'
+
+# RFI spikes in SPW 4 throughout most scans.
+mode='manual' spw='4'
+
+# High scatter in ea01 from SPW 8
+mode='manual' spw='8' antenna='ea01'
+
+mode='manual' scan='2,3' spw='5:50~60' antenna='ea13'
+
+# Anomalous amplitudes
+mode='manual' scan='2' timerange=">13:34:00" spw='8'
+
+mode='manual' scan='4' antenna='ea05&&ea23' timerange=">13:45:00"
+
+mode='manual' scan='9' antenna='ea09&&ea15'
+
+mode='manual' scan='2' timerange='<13:29:00'
+mode='manual' scan='4' timerange='<13:42:20'
+
+mode='manual' scan='6,7' antenna='ea03' spw='1,2'
+
+# ea23 causing weird spikes across multiple SPW in certain
+# baselines. Just get rid of it...
+mode='manual' scan='6,7' antenna='ea23'
+
+mode='manual' scan='6,9' timerange='>13:58:30'
+mode='manual' scan='7' timerange='>14:07:30'
+mode='manual' scan='7,9' timerange='<14:00:40'
+
+
+# Consistent scatter throughout
+mode='manual' antenna='ea13' spw='1,2'
+
+# Lots of uv scatter in scan 2 of SPW 5,6
+# Only use scan 3 for BP/delay
+mode='manual' scan='2' spw='5,6'
+
+# Constant RFI in SPW 6
+# And it's mostly in the short baselines...
+# Chans 380~500 are badly affected but the rest isn't
+# great either
+mode='manual' spw='6'
+
+# Similar problems in spw 8
+mode='manual' spw='8'
+
+# Weird uv amp structures
+mode='manual' antenna='ea23,ea24' spw='8'
+
+

@@ -1,0 +1,37 @@
+# Custom line flagging for 13A-213.sb20685305.eb20820921.56405.00397291667
+
+# Pipeline did not fully flag setup scan
+mode='manual' scan='1'
+
+mode='manual' scan='2' timerange='<23:57:00'
+
+# Large amp scatter in ea19 through flux cal scans
+mode='manual' antenna='ea19'
+
+# Some HI BP absorption
+mode='manual' spw='0:1680~1820'
+
+# Flag unused 3C286 scan
+mode='manual' field='4'
+
+mode='manual' scan='4' timerange='<00:13:20'
+mode='manual' scan='8' timerange='<00:39:30'
+mode='manual' scan='17' timerange='<01:47:50'
+mode='manual' scan='20' timerange='>02:12:30'
+mode='manual' scan='26' timerange='>02:58:00'
+mode='manual' scan='32' timerange='<03:41:40'
+
+mode='manual' scan='12' timerange='<01:05:20'
+mode='manual' scan='18' timerange='>01:58:30'
+mode='manual' scan='24' timerange='>02:45:20'
+
+mode='manual' scan='27' spw='1:0~30'
+
+mode='manual' scan='27' spw='3'
+
+# Horrid RFI
+mode='manual' scan='19~22'
+# Some RFI persists through to scan 28
+# Check if this is in certain antennas only or
+# whether it should all be flagged
+
