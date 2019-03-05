@@ -10,13 +10,13 @@ mode='manual' scan='3' timerange='>21:26:20'
 mode='manual' scan='30'
 
 # Lots of uv scatter
-mode='manual' antenna='ea19'
+mode='manual' antenna='ea19, ea03'
 
 # Horrible gain solutions
 mode='manual' antenna='ea27'
 
 # Some HI BP absorption
-mode='manual' spw='0:1680~1820'
+mode='manual' spw='0:1680~1920'
 
 mode='manual' scan='4' timerange='<21:34:00'
 mode='manual' scan='20' timerange='<23:26:30'
@@ -27,3 +27,15 @@ mode='manual' scan='6,9'
 
 mode='manual' scan='24' timerange='<23:52:00'
 
+# RFI spike
+mode='manual' spw='1:80~100'
+mode='manual' spw='1' scan='12,13,24,27,28'
+mode='manual' spw='23' timerange='<23:49:00' spw='3,5'
+mode='manual' spw='26' timerange='>00:12:10' spw='3,5'
+mode='manual' spw='3' scan='12,16~19,27,28'
+mode='manual' spw='3,5,8,9' scan='24' timerange='<23:53:00'
+mode='manual' spw='5' scan='7'
+mode='manual' spw='8' scan='24'
+mode='manual' spw='9' scan='21,22'
+
+mode='manual' antenna='ea05,ea11' spw='9'

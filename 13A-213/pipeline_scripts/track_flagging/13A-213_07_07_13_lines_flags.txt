@@ -1,9 +1,9 @@
 # Line SPW flagging for 13A-213.sb23939073.eb24085722.56480.817369131946
 
 # Some HI BP absorption
-mode='manual' spw='0:1680~1820'
+mode='manual' spw='0:1680~1920'
 
-mode='manual' scan='1'
+mode='manual' scan='1,30'
 
 # uv amp scatter
 mode='manual' scan='2' antenna='ea14'
@@ -25,5 +25,7 @@ mode='manual' scan='24' spw='3'
 mode='manual' scan='15' spw='3' timerange='<21:13:30'
 mode='manual' scan='16' spw='3' timerange='<21:22:30'
 
-
+mode='manual' spw='5' scan='15~22'
+mode='manual' spw='6' scan='15,16'
+mode='manual' spw='7' scan='16'
 

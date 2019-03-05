@@ -1,0 +1,22 @@
+# Line SPW flagging for 13A-213.sb23939073.eb24124455.56487.81900869213
+
+# Large delays
+mode='manual' antenna='ea02'
+
+# Some HI BP absorption
+mode='manual' spw='0:1700~1920'
+
+# amp phase variations in original BP scans
+mode='manual' scan='2,3'
+
+# Large RFI spikes
+mode='manual' scan='12,13,15,18'
+
+mode='manual' scan='19' spw='1'
+
+
+# 3C286 is now used for flux and bandpass
+mode='manual' scan='30' timerange='<23:05:00'
+
+mode='manual' scan='4' timerange='<19:57:50'
+mode='manual' scan='29' timerange='<22:57:10'

@@ -1,0 +1,21 @@
+# Line SPW flagging for 13A-213.sb23938537.eb24172212.56503.318132465276
+
+# Consistently high scatter
+mode='manual' antenna='ea19'
+
+mode='manual' scan='2' timerange='<07:44:00'
+mode='manual' scan='3' timerange='<07:49:00'
+
+# 3C138 not used here
+mode='manual' scan='30'
+
+mode='manual' scan='4' timerange='<07:54:10'
+mode='manual' scan='5' timerange='<08:00:20'
+mode='manual' scan='11' timerange='<08:45:10'
+mode='manual' scan='12' timerange='<08:47:20'
+
+# RFI in SPW 3
+
+mode='manual' scan='9~12' spw='3'
+
+mode='manual' spw='5' scan='21,24,25,28'

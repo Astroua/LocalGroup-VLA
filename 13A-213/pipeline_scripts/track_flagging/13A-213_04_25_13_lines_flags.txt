@@ -31,7 +31,6 @@ mode='manual' scan='27' spw='3'
 
 # Horrid RFI
 mode='manual' scan='19~22'
-# Some RFI persists through to scan 28
-# Check if this is in certain antennas only or
-# whether it should all be flagged
+
+mode='manual' spw='0' scan='24~28'
 
