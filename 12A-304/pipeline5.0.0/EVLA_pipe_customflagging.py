@@ -11,9 +11,13 @@ flag_filename = "{}_lines_flags.txt".format(parentdir)
 flag_path = os.path.expanduser("~/LocalGroup-VLA/12A-304/track_flagging")
 full_flag_filename = os.path.join(flag_path, flag_filename)
 
+logprint("Looking for custom flag script", logfileout='logs/custom_flagging.log')
+
+
 if os.path.exists(full_flag_filename):
     copyfile(full_flag_filename,
              "additional_flagging.txt")
+    logprint("Found additional flagging script.", logfileout='logs/custom_flagging.log')
 
     # Now run flagdata and flagmanager
 
@@ -24,7 +28,9 @@ if os.path.exists(full_flag_filename):
 
     default('flagmanager')
     flagmanager(vis=ms_active, versionname='custom_flagging')
+    logprint("Created custom flagging version.", logfileout='logs/custom_flagging.log')
 
 else:
-    print("No additional flagging script found in the VLA_Lband repo"
+    print("No additional flagging script found in the LocalGroup-VLA repo"
           " for lines.")
+    logprint("No additional flagging script found in the LocalGroup-VLA repo", logfileout='logs/custom_flagging.log')
