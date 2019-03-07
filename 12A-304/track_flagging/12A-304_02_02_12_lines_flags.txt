@@ -1,0 +1,11 @@
+mode='manual' spw='0~15:0~10'
+mode='manual' spw='0~15:117~127'
+mode='manual' spw='0:34~70' intent='*CALIBRATE_FLUX*
+mode='manual' spw='0:34~70' intent='*CALIBRATE_AMP*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_FLUX*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_AMP*
+mode='manual' antenna='ea05,ea21,ea23'
+mode='manual' antenna='ea13&&ea19'
+mode='manual' antenna='ea07&&ea19'
+mode='manual' antenna='ea25&&ea19'
+mode='manual' antenna='ea15,ea25'

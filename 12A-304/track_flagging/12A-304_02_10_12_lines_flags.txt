@@ -1,0 +1,9 @@
+mode='manual' spw='0~15:0~10'
+mode='manual' spw='0~15:117~127'
+mode='manual' spw='0:34~70' intent='*CALIBRATE_FLUX*
+mode='manual' spw='0:34~70' intent='*CALIBRATE_AMP*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_FLUX*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_AMP*
+mode='manual' antenna='ea06,ea16,ea18,ea18,ea23,ea25'
+mode='manual' antenna='ea28' scan='110'
+mode='manual' timerange='22:16:00~22:21:00'
