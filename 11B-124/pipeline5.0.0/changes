@@ -1,0 +1,11 @@
+EVLA_pipeline.py
+-updated casa version number, pipeline version number, revision date
+-casadef.casa_version no longer works. Using casa['build']['version'] for the version check.
+
+EVLA_pipe_weblog.py
+-replaced casadef.casa syntax with casa['build'] as needed to reflect the casa version and the revision.
+
+EVLA_pipe_solint.py
+implemented Brian Kent's changes to capture End Times if spw's come
+and go due to flagging
+

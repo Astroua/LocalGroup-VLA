@@ -1,17 +1,14 @@
-# Custom flagging in 11B-124.sb5334017.eb5886098.55875.214899375
-
-# Flag edge channel
-mode='manual' spw='0~15:0~10;53~63'
-
-# Bad ants
-# ea06 shows no phase coherence
-mode='manual' antenna='ea06'
-# ea22 shows weird amplitude variations
-mode='manual' antenna='ea22'
-
-# Beginning of 3C48 scans are noisy
-mode='manual' timerange='05:09:30~05:10:20'
-
-# Flag HI absorption regions on BP
-mode='manual' spw='0:19~31'
-mode='manual' spw='8:45~63'
+mode='manual' spw='0~15:0~10'
+mode='manual' spw='0~15:117~127'
+mode='manual' antenna='ea06,ea22,ea05,ea01'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_AMP*'
+mode='manual' timerange='<05:13:30'
+mode='manual' scan='40' timerange='<06:12:30'
+mode='manual' scan='5' timerange='<05:26:10'
+mode='manual' scan='23' timerange='<05:50:34'
+mode='manual' scan='41' timerange='<06:15:25'

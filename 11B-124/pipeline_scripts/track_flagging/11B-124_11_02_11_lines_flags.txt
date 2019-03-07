@@ -1,11 +1,13 @@
-# Custom flagging for 11B-124.sb5334017.eb5769266.55867.351589467595
-
-# Flag edge channels
-mode='manual' spw='0~15:0~10;53~63'
-
-# Bad ants
+mode='manual' spw='0~15:0~10'
+mode='manual' spw='0~15:117~127'
 mode='manual' antenna='ea07,ea18'
-
-# Flag HI absorption regions on BP
-mode='manual' spw='0:19~31'
-mode='manual' spw='8:45~63'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_AMP*'
+mode='manual' scan='2' timerange='<08:32:10'
+mode='manual' scan='4' timerange='<08:40:45'
+mode='manual' scan='22' timerange='<09:04:30'
+mode='manual' scan='23' timerange='<09:07:15'

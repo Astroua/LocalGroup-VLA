@@ -1,11 +1,11 @@
-# Custom flagging in 11B-124.sb5334017.eb5794981.55872.243100023145
-
-# Flag edge channel
-mode='manual' spw='0~15:0~10;53~63'
-
-# Bad ants; ea05 misses some SPWs
+mode='manual' spw='0~15:0~10'
+mode='manual' spw='0~15:117~127'
 mode='manual' antenna='ea05'
-
-# Flag HI absorption regions on BP
-mode='manual' spw='0:19~31'
-mode='manual' spw='8:45~63'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_AMP*'
+mode='manual' scan='22' timerange='<06:44:00'
+mode='manual' scan='23' timerange='<06:46:58'

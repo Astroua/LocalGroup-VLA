@@ -1,14 +1,19 @@
-# Custom flagging for 11B-124.sb5338463.eb5670977.55851.2071834838
-
-# Flag edge channels
-mode='manual' spw='0~15:0~10;53~63'
-
-# Pathological amp in bandpass
+mode='manual' spw='0~15:0~10'
+mode='manual' spw='0~15:117~127'
 mode='manual' antenna='ea12'
-
-# Noisy
 mode='manual' antenna='ea07,ea28'
-
-# Flag HI absorption regions on BP
-mode='manual' spw='0:19~31'
-mode='manual' spw='8:45~63'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='0:19~65' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:45~63' intent='*CALIBRATE_AMP*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_FLUX*'
+mode='manual' spw='8:95~127' intent='*CALIBRATE_AMP*'
+mode='manual' scan='4' timerange='<05:14:45'
+mode='manual' scan='22' timerange='<05:36:30'
+mode='manual' scan='40' timerange='<05:58:30'
+mode='manual' scan='57' timerange='<06:20:50'
+mode='manual' scan='75' timerange='<06:42:45'
+mode='manual' scan='58' timerange='<06:23:50'
+mode='manual' scan='41' timerange='<06:02:04'
+mode='manual' scan='94' timerange='<07:07:54'
+mode='manual' spw='4' antenna='ea06&&ea26'
