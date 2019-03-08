@@ -80,3 +80,10 @@ tar -xf 11B-124.sb5334017.eb5952572.55887.25485887731.tar
 ~/casa-release-5.0.0-218.el6/bin/casa -c ~/LocalGroup-VLA/11B-124/pipeline5.0.0/EVLA_pipeline.py 11B-124.sb5334017.eb5952572.55887.25485887731 n n
 
 cd ..
+
+# Backups onto kant
+backup_loc="~/kant/VLA_tracks/11B-124/pipeline_products"
+
+cd 11B-124_10_17_11
+~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cd ../
