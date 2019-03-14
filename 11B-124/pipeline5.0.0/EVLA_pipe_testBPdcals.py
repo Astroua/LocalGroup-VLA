@@ -107,6 +107,82 @@ else:
     parang=False
     gaincal()
 
+# This is failing for some tracks b/c of requantizergains in the flux cal
+# scans. If this occurs, remove this field from priorcals and try again.
+
+if not os.path.exists('testdelayinitialgain.g'):
+
+    logprint("Initial phase calibration on delay calibrator failed."
+             " Running again without requantizergains.",
+             logfileout='logs/testBPdcals.log')
+
+    if "requantizergains.g" in priorcals:
+        priorcals.remove("requantizergains.g")
+    else:
+        logprint("Did not find requantizergains but delay gain cal.",
+                 logfileout='logs/testBPdcals.log')
+        raise ValueError("Did not find requantizergains but delay gain cal "
+                         "failed.")
+
+    # Try the above once more.
+
+    if (cal3C84_d == True):
+        default('gaincal')
+        vis=ms_active
+        caltable='testdelayinitialgain.g'
+        field=delay_field_select_string
+        spw=tst_delay_spw
+        intent=''
+        selectdata=True
+        uvrange=uvrange3C84
+        scan=delay_scan_select_string
+        solint='int'
+        combine='scan'
+        preavg=-1.0
+        refant=refAnt
+        minblperant=minBL_for_cal
+        minsnr=3.0
+        solnorm=False
+        gaintype='G'
+        smodel=[]
+        calmode='p'
+        append=False
+        docallib=False
+        gaintable=priorcals
+        gainfield=['']
+        interp=['']
+        spwmap=[]
+        parang=False
+        gaincal()
+    else:
+        default('gaincal')
+        vis=ms_active
+        caltable='testdelayinitialgain.g'
+        field=delay_field_select_string
+        spw=tst_delay_spw
+        intent=''
+        selectdata=True
+        uvrange=''
+        scan=delay_scan_select_string
+        solint='int'
+        combine='scan'
+        preavg=-1.0
+        refant=refAnt
+        minblperant=minBL_for_cal
+        minsnr=3.0
+        solnorm=False
+        gaintype='G'
+        smodel=[]
+        calmode='p'
+        append=False
+        docallib=False
+        gaintable=priorcals
+        gainfield=['']
+        interp=['']
+        spwmap=[]
+        parang=False
+        gaincal()
+
 
 logprint ("Initial phase calibration on delay calibrator complete", logfileout='logs/testBPdcals.log')
 
