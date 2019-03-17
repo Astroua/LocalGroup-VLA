@@ -15,11 +15,11 @@ myvis = glob("*.ms")
 assert len(myvis) == 10
 
 default('concat')
-virtualconcat(vis=myvis, concatvis='11B-145_lines_all.ms', timesort=False)
+virtualconcat(vis=myvis, concatvis='11B-124_lines_all.ms')
 
 default('mstransform')
-mstransform(vis='11B-145_lines_all.ms',
-            outputvis='11B-145_lines.ms',
+mstransform(vis='11B-124_lines_all.ms',
+            outputvis='11B-124_lines.ms',
             field='M31*',
             datacolumn='corrected',
             spw='0~15',
@@ -31,4 +31,4 @@ mstransform(vis='11B-145_lines_all.ms',
             regridms=True,
             keepflags=False)
 
-# os.system("rm -r 11B-145_lines_all.ms")
+# os.system("rm -r 11B-124_lines_all.ms")
