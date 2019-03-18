@@ -13,7 +13,7 @@ import numpy as np
 # Load in the auto image parameter setters
 from CASA_functions import set_cellsize, set_imagesize
 
-from tasks import tclean
+from tasks import tclean, listobs
 
 spw_num = int(sys.argv[-1])
 
