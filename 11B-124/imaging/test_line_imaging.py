@@ -56,7 +56,7 @@ tclean(vis=myvis,
                               'M31_11B-124_{0}_spw_{1}.dirty'
                               .format("HI", spw_num)),
        spw=str(spw_num),
-       field='M33*',
+       field='M31*',
        imsize=myimagesize,
        cell=mycellsize,
        specmode='cube',
