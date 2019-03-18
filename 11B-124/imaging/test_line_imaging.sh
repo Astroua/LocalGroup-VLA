@@ -13,7 +13,7 @@ source /home/ekoch/.bashrc
 source /home/ekoch/preload.bash
 
 # Give which spw using the --export flag when calling sbatch
-export scratch_path=/home/ekoch/scratch/M31_imaging/11B-145/
+export scratch_path=/home/ekoch/scratch/M31_imaging/11B-124/
 
 # export project_path=/home/ekoch/project/ekoch/
 
