@@ -2,7 +2,7 @@
 '''
 Create a dirty for the given SPW
 
-Should be run from the 17B-162_imaging folder on cedar
+Should be run from the M31_imaging/11B-124 folder on cedar
 '''
 
 import os
@@ -24,6 +24,9 @@ if not os.path.exists(output_path):
 
 # Grab all of the MS tracks in the folder (should be 17)
 myvis = "11B-124_lines.ms"
+
+# Run listobs
+listobs(vis=myvis)
 
 # Assume we can set reasonable image parameters from any of the tracks
 mycellsize = set_cellsize(myvis, spw_num, sample_factor=6.,
