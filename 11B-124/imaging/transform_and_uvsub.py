@@ -13,8 +13,6 @@ myvis = '11B-124_lines.ms'
 
 default('mstransform')
 
-casalog.post("On SPW {}".format(spw_num))
-
 # Note that the combined MS already only includes the calibrated data
 # with all flagged data removed.
 
@@ -23,6 +21,8 @@ casalog.post("On SPW {}".format(spw_num))
 
 spw_num = 0
 line_name = "HI"
+
+casalog.post("On SPW {}".format(spw_num))
 
 do_uvcontsub = False
 out_vis = "11B-124_{0}_spw_{1}_LSRK.ms"\
