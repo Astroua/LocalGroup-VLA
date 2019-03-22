@@ -26,7 +26,7 @@ casalog.post("On SPW {}".format(spw_num))
 out_vis = "{}_LSRK.ms".format(myvis.rstrip(".ms"))
 
 mstransform(vis=myvis, outputvis=out_vis, spw=str(spw_num),
-            datacolumn='corrected',
+            datacolumn='data',
             regridms=True, mode='channel', interpolation='fftshift',
             phasecenter=galaxy_dict[gal_name.lower()]['phasecenter'],
             restfreq="1.420405752GHz", outframe='LSRK',
@@ -38,4 +38,4 @@ out_vis_cs = "{}_LSRK.ms.contsub".format(myvis.rstrip(".ms"))
 
 uvcontsub(vis=out_vis,
           fitspw=galaxy_dict[gal_name.lower()]['cont_range'],
-          fitorder=0, want_cont=False, datacolumn='corrected')
+          fitorder=0, want_cont=False, datacolumn='data')
