@@ -54,7 +54,7 @@ default('tclean')
 tclean(vis=myvis,
        datacolumn='corrected',
        imagename=os.path.join(output_path,
-                              'M31_11B-124_{0}_spw_{1}.dirty'
+                              'M31_11B-124_{0}_spw_{1}.clean'
                               .format("HI", spw_num)),
        spw=str(spw_num),
        field='M31*',
