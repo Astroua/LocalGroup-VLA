@@ -37,7 +37,4 @@ export DISPLAY=:1
 echo "OMP_NUM_THREADS "$OMP_NUM_THREADS
 echo "Running SPW "$spw
 
-$HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/11B-124/imaging/line_imaging_stage1.py $gal_folder
-
-# Copy the dirty_cube folder into project space
-# cp -R $scratch_path/dirty_cube $project_path
+$HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/13A-213/HI/imaging/line_imaging_stage1.py $gal_folder

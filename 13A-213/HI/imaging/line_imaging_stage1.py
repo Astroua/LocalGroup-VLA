@@ -16,6 +16,9 @@ from CASA_functions import set_cellsize, set_imagesize
 
 from tasks import tclean, listobs
 
+# Load in the info dicts from the repo
+execfile(os.path.expanduser("~/code/LocalGroup-VLA/13A-213/spw_setup.py"))
+
 
 # galaxy name given. And is folder name
 gal_name = sys.argv[-1]
@@ -72,7 +75,7 @@ tclean(vis=myvis,
        niter=1000000,
        threshold='',
        nsigma=5.,
-       phasecenter='J2000 00h42m44.350 +41d16m08.63',
+       phasecenter=galaxy_dict[gal_name.lower()]['phasecenter'],
        restfreq="1.420405752GHz",
        outframe='LSRK',
        pblimit=mypblimit,
