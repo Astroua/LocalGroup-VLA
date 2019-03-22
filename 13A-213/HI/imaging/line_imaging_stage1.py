@@ -23,8 +23,7 @@ execfile(os.path.expanduser("~/code/LocalGroup-VLA/13A-213/spw_setup.py"))
 # galaxy name given. And is folder name
 gal_name = sys.argv[-1]
 
-myvis = '13A-213_{}_spw0.ms.contsub'.format(gal_name)
-
+myvis = '13A-213_{}_spw0_LSRK.ms.contsub'.format(gal_name)
 spw_num = 0
 
 output_path = "HI_stage1"
