@@ -29,6 +29,7 @@ elif [[ $job_num -eq 3 ]]; then
     gal_folder='SextansA'
 fi
 
+cd $scratch_path/$gal_folder
 
 Xvfb :1 &
 export DISPLAY=:1
