@@ -51,11 +51,24 @@ default('tclean')
 # pad_chan = int(np.ceil(linespw_dict[spw_num][2] * 0.05))
 # num_chan = int(linespw_dict[spw_num][2]) - 2 * pad_chan
 
+image_name = os.path.join(output_path,
+                          'M31_11B-124_{0}_spw_{1}.clean'
+                          .format("HI", spw_num))
+
+if os.path.exists("{}.image".format(image_name)):
+    calcres = False
+    calcpsf = False
+    nsigma = 2.
+    cycleniter = 2000
+else:
+    calcres = True
+    calcpsf = True
+    nsigma = 5.
+    cycleniter = 1000
+
 tclean(vis=myvis,
        datacolumn='corrected',
-       imagename=os.path.join(output_path,
-                              'M31_11B-124_{0}_spw_{1}.clean'
-                              .format("HI", spw_num)),
+       imagename=image_name,
        spw=str(spw_num),
        field='M31*',
        imsize=myimagesize,
@@ -69,7 +82,7 @@ tclean(vis=myvis,
        weighting='natural',
        niter=1000000,
        threshold='',
-       nsigma=5.,
+       nsigma=nsigma,
        phasecenter='J2000 00h42m44.350 +41d16m08.63',
        restfreq="1.420405752GHz",
        outframe='LSRK',
@@ -83,5 +96,7 @@ tclean(vis=myvis,
        chanchunks=-1,
        restoration=True,
        parallel=True,
-       cycleniter=1000,  # Force a lot of major cycles
+       cycleniter=cycleniter,  # Force a lot of major cycles
+       calcres=calcres,
+       calcpsf=calcpsf,
        )
