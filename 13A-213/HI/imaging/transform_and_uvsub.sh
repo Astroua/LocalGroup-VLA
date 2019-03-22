@@ -35,4 +35,4 @@ cd $scratch_path/$gal_folder
 Xvfb :1 &
 export DISPLAY=:1
 
-$HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/11B-124/imaging/transform_and_uvsub.py $gal_folder
+$HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/13A-213/HI/imaging/transform_and_uvsub.py $gal_folder
