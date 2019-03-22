@@ -38,4 +38,4 @@ out_vis_cs = "{}_LSRK.ms.contsub".format(myvis.rstrip(".ms"))
 
 uvcontsub(vis=out_vis,
           fitspw=galaxy_dict[gal_name.lower()]['cont_range'],
-          fitorder=0, want_cont=False, datacolumn='data')
+          fitorder=0, want_cont=False)
