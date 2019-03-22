@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --time=48:00:00
-#SBATCH --mem=512000M
+#SBATCH --mem=128000M
 #SBATCH --ntasks-per-node=32
 #SBATCH --nodes=1
-#SBATCH --job-name=M31_11B_stage1clean_cube-%J
-#SBATCH --output=casa-m31_11B_stage1clean_cube-%J.out
+#SBATCH --job-name=13A_stage1clean_cube-%A-%a
+#SBATCH --output=casa-13A_stage1clean_cube-%A-%a.out
 #SBATCH --array=0-3
 
 export OMP_NUM_THREADS=$SLURM_JOB_CPUS_PER_NODE
