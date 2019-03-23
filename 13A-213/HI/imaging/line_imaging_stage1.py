@@ -21,12 +21,21 @@ execfile(os.path.expanduser("~/code/LocalGroup-VLA/13A-213/spw_setup.py"))
 
 
 # galaxy name given. And is folder name
-gal_name = sys.argv[-1]
+gal_name = sys.argv[-2]
 
-myvis = '13A-213_{}_spw0_LSRK.ms.contsub'.format(gal_name)
+use_contsub = True if sys.argv[-1] == 'y' else False
+
 spw_num = 0
 
-output_path = "HI_stage1"
+if use_contsub:
+    myvis = '13A-213_{}_spw0_LSRK.ms.contsub'.format(gal_name)
+    output_path = "HI_stage1"
+    imgname = '{0}_13A-213_{1}_spw_{2}.clean'.format(gal_name, "HI", spw_num)
+else:
+    myvis = '13A-213_{}_spw0_LSRK.ms'.format(gal_name)
+    output_path = "HI_stage1_wcont"
+    imgname = '{0}_13A-213_{1}_spw_{2}_wcont.clean'\
+        .format(gal_name, "HI", spw_num)
 
 if not os.path.exists(output_path):
     os.mkdir(output_path)
@@ -54,15 +63,9 @@ casalog.post("Image size: {}".format(myimagesize))
 # Image ALL channels in the MS. Just looking for reduction issues
 default('tclean')
 
-# Don't image the channel edges
-# pad_chan = int(np.ceil(linespw_dict[spw_num][2] * 0.05))
-# num_chan = int(linespw_dict[spw_num][2]) - 2 * pad_chan
-
 tclean(vis=myvis,
        datacolumn='corrected',
-       imagename=os.path.join(output_path,
-                              '{0}_13A-213_{1}_spw_{2}.clean'
-                              .format(gal_name, "HI", spw_num)),
+       imagename=os.path.join(output_path, imgname),
        spw=str(spw_num),
        field='*',
        imsize=myimagesize,

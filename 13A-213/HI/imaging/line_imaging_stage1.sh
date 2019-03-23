@@ -37,4 +37,7 @@ export DISPLAY=:1
 echo "OMP_NUM_THREADS "$OMP_NUM_THREADS
 echo "Running SPW "$spw
 
-$HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/13A-213/HI/imaging/line_imaging_stage1.py $gal_folder
+# Inputs are the galaxy name (folder) and whether to use the contsub
+# HI version or not
+
+$HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/13A-213/HI/imaging/line_imaging_stage1.py $gal_folder y
