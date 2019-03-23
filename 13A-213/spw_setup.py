@@ -18,11 +18,21 @@ linespw_dict = {0: ["HI", "1.420405752GHz", 2048],
                 11: ["H151alp", "1.891212GHz", 128]}
 
 # Continuum ranges are for HI only
+# HI_start and HI_nchan is the start and number of channels to use in the
+# final imaging.
 galaxy_dict = dict(ic1613={"phasecenter": "J2000 01h04m47.790 +02d07m04.0",
-                           "cont_range": "0:450~700;1150~1500"},
+                           "cont_range": "0:450~700;1150~1500",
+                           "HI_start": 750,
+                           "HI_nchan": 500},
                    wlm={"phasecenter": "J2000 00h01m58.160 -15d27m39.30",
-                        "cont_range": "0:200~600;1250~1700"},
+                        "cont_range": "0:200~600;1250~1700",
+                        "HI_start": 700,
+                        "HI_nchan": 600},
                    ngc6822={"phasecenter": "J2000 19h44m57.700 -14d48m12.00",
-                            "cont_range": "0:500~650;1150~1550"},
+                            "cont_range": "0:500~650;1150~1550",
+                            "HI_start": 720,
+                            "HI_nchan": 500},
                    sextansa={"phasecenter": "J2000 10h11m00.790 -04d41m34.00",
-                             "cont_range": "0:150~700;1070~1500"})
+                             "cont_range": "0:150~700;1070~1500",
+                             "HI_start": 600,
+                             "HI_nchan": 600},)
