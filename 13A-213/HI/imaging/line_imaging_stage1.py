@@ -31,6 +31,9 @@ output_path = "HI_stage1"
 if not os.path.exists(output_path):
     os.mkdir(output_path)
 
+# List the obs in the MS
+listobs(myvis)
+
 # Assume we can set reasonable image parameters from any of the tracks
 mycellsize = set_cellsize(myvis, spw_num, sample_factor=6.,
                           baseline_percentile=95,
