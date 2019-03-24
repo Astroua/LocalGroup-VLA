@@ -2,12 +2,13 @@
 '''
 Create a dirty for the given SPW
 
-Should be run from the M31_imaging/11B-124 folder on cedar
+Should be run from the 13A-213_imaging folder on cedar
 
 Stage 1 cleaning - no clean mask down to 5-sigma
 '''
 
 import os
+import sys
 
 # Requires analysisutils to be appended to the casa path
 # Load in the auto image parameter setters
@@ -15,18 +16,32 @@ from CASA_functions import set_cellsize, set_imagesize
 
 from tasks import tclean, listobs
 
+# Load in the info dicts from the repo
+execfile(os.path.expanduser("~/code/LocalGroup-VLA/13A-213/spw_setup.py"))
+
+
+# galaxy name given. And is folder name
+gal_name = sys.argv[-2]
+
+use_contsub = True if sys.argv[-1] == 'y' else False
+
 spw_num = 0
 
-output_path = "HI_stage1"
+if use_contsub:
+    myvis = '13A-213_{}_spw0_LSRK.ms.contsub'.format(gal_name)
+    output_path = "HI_stage1"
+    imgname = '{0}_13A-213_{1}_spw_{2}.clean'.format(gal_name, "HI", spw_num)
+else:
+    myvis = '13A-213_{}_spw0_LSRK.ms'.format(gal_name)
+    output_path = "HI_stage1_wcont"
+    imgname = '{0}_13A-213_{1}_spw_{2}_wcont.clean'\
+        .format(gal_name, "HI", spw_num)
 
 if not os.path.exists(output_path):
     os.mkdir(output_path)
 
-# Grab all of the MS tracks in the folder (should be 17)
-myvis = "11B-124_HI_spw_0_LSRK.mms.contsub"
-
-# Run listobs
-listobs(vis=myvis)
+# List the obs in the MS
+listobs(myvis)
 
 # Assume we can set reasonable image parameters from any of the tracks
 mycellsize = set_cellsize(myvis, spw_num, sample_factor=6.,
@@ -37,66 +52,46 @@ casalog.post("Cell size: {}".format(mycellsize))
 # Choose something low as there is some HI near the edges of the mosaic
 mypblimit = 0.05
 
-# Will look for all M33 fields and assume they are all used in the mosaic
-source = 'M31'
-
-myimagesize = set_imagesize(myvis, spw_num, source, sample_factor=6.,
-                            max_size=15000, pblevel=mypblimit)
+# Set to something fairly large.
+# My routine is underestimating the pb limit size a bit
+# for some of these cases
+myimagesize = 1024
+# myimagesize = set_imagesize(myvis, spw_num, source, sample_factor=6.,
+#                             max_size=15000, pblevel=mypblimit)
 casalog.post("Image size: {}".format(myimagesize))
 
 # Image ALL channels in the MS. Just looking for reduction issues
 default('tclean')
 
-# Don't image the channel edges
-# pad_chan = int(np.ceil(linespw_dict[spw_num][2] * 0.05))
-# num_chan = int(linespw_dict[spw_num][2]) - 2 * pad_chan
-
-image_name = os.path.join(output_path,
-                          'M31_11B-124_{0}_spw_{1}.clean'
-                          .format("HI", spw_num))
-
-if os.path.exists("{}.image".format(image_name)):
-    calcres = False
-    calcpsf = False
-    nsigma = 2.
-    cycleniter = 2000
-else:
-    calcres = True
-    calcpsf = True
-    nsigma = 5.
-    cycleniter = 1000
-
 tclean(vis=myvis,
        datacolumn='corrected',
-       imagename=image_name,
+       imagename=os.path.join(output_path, imgname),
        spw=str(spw_num),
-       field='M31*',
+       field='*',
        imsize=myimagesize,
        cell=mycellsize,
        specmode='cube',
-       start=16,
+       start=galaxy_dict[gal_name.lower()]['HI_start'],
        width=1,
-       nchan=1074,
+       nchan=galaxy_dict[gal_name.lower()]['HI_nchan'],
        startmodel=None,
        gridder='mosaic',
        weighting='natural',
        niter=1000000,
        threshold='',
-       nsigma=nsigma,
-       phasecenter='J2000 00h42m44.350 +41d16m08.63',
+       nsigma=5.,
+       phasecenter=galaxy_dict[gal_name.lower()]['phasecenter'],
        restfreq="1.420405752GHz",
        outframe='LSRK',
        pblimit=mypblimit,
        usemask='pb',
        mask=None,
        deconvolver='multiscale',
-       scales=[0, 5, 10, 50],
+       scales=[0, 5, 10, 50],  # Need to change b/w C+D vs D??
        pbcor=False,
        veltype='radio',
        chanchunks=-1,
        restoration=True,
        parallel=True,
-       cycleniter=cycleniter,  # Force a lot of major cycles
-       calcres=calcres,
-       calcpsf=calcpsf,
+       cycleniter=1000,  # Force a lot of major cycles
        )

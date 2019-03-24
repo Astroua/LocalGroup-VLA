@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --time=124:00:00
-#SBATCH --mem=1547000M
+#SBATCH --time=48:00:00
+#SBATCH --mem=512000M
 #SBATCH --ntasks-per-node=32
 #SBATCH --nodes=1
 #SBATCH --job-name=M31_11B_stage1clean_cube-%J
