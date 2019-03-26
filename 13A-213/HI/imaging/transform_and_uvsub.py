@@ -27,7 +27,7 @@ out_vis = "{}_LSRK.ms".format(myvis.rstrip(".ms"))
 
 mstransform(vis=myvis, outputvis=out_vis, spw=str(spw_num),
             datacolumn='data',
-            regridms=True, mode='channel', interpolation='fftshift',
+            regridms=True, mode='channel', interpolation='linear',
             phasecenter=galaxy_dict[gal_name.lower()]['phasecenter'],
             restfreq="1.420405752GHz", outframe='LSRK',
             douvcontsub=False)
