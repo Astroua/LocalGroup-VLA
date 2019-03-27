@@ -4,7 +4,7 @@ Create a dirty for the given SPW
 
 Should be run from the 13A-213_imaging folder on cedar
 
-Stage 1 cleaning - no clean mask down to 5-sigma
+Stage 1 cleaning - clean to 5-sigma WITH auto-masking
 '''
 
 import os
