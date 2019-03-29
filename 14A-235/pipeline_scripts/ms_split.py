@@ -71,7 +71,7 @@ if split_lines:
 
     split(vis=ms_active,
           outputvis=lines_folder + "/" + mySDM + ".speclines.ms",
-          spw="8~19", datacolumn='DATA', field="")
+          spw="8~12", datacolumn='DATA', field="")
 
 # While it would be nice to remove the pol cal scans here, the pipeline
 # will fail when running fluxboot because there is no other calibration

@@ -1,0 +1,16 @@
+# d_track11
+# 14A-235.sb29418542.eb29508731.56864.28173256945
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Poor ea12 phase gains
+mode='manual' antenna='ea12' intent='*PHASE*' scan='43~52'
+
+# Poor ea25 phases
+mode='manual' antenna='ea25'
+
+# Poor baselines
+mode='manual' scan='2~10' intent='*PHASE*' antenna='ea08&ea22;ea01&ea20;ea07&ea20;ea06&ea07;ea01&ea22;ea20&ea22;ea08&ea28;ea04&ea18;ea04&ea08;ea02&ea06;ea17&ea18;ea17&ea21;ea02&ea27;ea08&ea19;ea22&ea26;ea19&ea26;ea04&ea19;ea05&ea23;ea01&ea08;ea19&ea28;ea04&ea28'

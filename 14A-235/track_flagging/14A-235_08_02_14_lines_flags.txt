@@ -1,0 +1,14 @@
+# d_track15
+# 14A-235.sb29418542.eb29513453.56871.3237440625
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Poor phases in ea12
+mode='manual' antenna='ea12' intent='*PHASE*' scan='17~43'
+
+# And in ea25
+mode='manual' antenna='ea25' scan='25,43,61'
+# May need to just flag this is so many gain scans are flagged

@@ -1,0 +1,12 @@
+# d_track4
+# 14A-235.sb29371209.eb29573515.56877.400355289356
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Noisy baseslines in scan 61
+mode='manual' scan='61' antenna='ea01&ea07;ea01&ea08;ea01&ea20;ea01&ea22;ea02&ea06;ea02&ea07;ea02&ea27;ea02&ea07;ea02&ea27;ea04&ea18;ea06&ea07;ea06&ea20;ea07&ea20;ea08&ea20;ea08&ea22;ea17&ea18;ea04&ea19;ea08&ea26;ea19&ea28;ea08&ea19;ea08&ea28;ea04&ea08;ea12&ea27;ea20&ea22;ea07&ea08'
+# May need to add ea01&ea19;ea11&ea19
+# Or just flag a couple ants...

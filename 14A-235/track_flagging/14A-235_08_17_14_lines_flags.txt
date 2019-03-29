@@ -1,0 +1,14 @@
+# d_track7
+# 14A-235.sb29371560.eb29589770.56886.467028680556
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Low amps in ea27
+mode='manual' antenna='ea27'
+
+# Low amps in ea01 and ea02? Check this
+# mode='manual' antenna='ea01,ea02'
+

@@ -10,7 +10,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -22,7 +22,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -34,7 +34,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -46,7 +46,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -58,7 +58,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -70,7 +70,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -82,7 +82,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -94,7 +94,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -106,7 +106,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -118,7 +118,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -130,7 +130,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -142,7 +142,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -154,7 +154,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -166,7 +166,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -178,7 +178,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -190,7 +190,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -204,7 +204,7 @@ cd ../../
 # cd $track_folder
 # tar -xf "${track_name}.tar"
 # ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-# cd "${track_name}_speclines"
+# cd "${track_folder}_speclines"
 # ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 # cd ../../
 
@@ -216,7 +216,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -228,7 +228,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
@@ -240,7 +240,7 @@ mv "${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-cd "${track_name}_speclines"
+cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 

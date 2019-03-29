@@ -1,0 +1,20 @@
+# d_track8
+# 14A-235.sb29371209.eb29509155.56865.36711972222
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Edge channels
+mode='manual' spw='0:3880~4095'
+
+# Bad phases in ea12
+mode='manual' intent='*PHASE*' antenna='ea12' scan='25~52'
+# maybe in scan 3 too?
+
+# mode='manual' timerange='12:04:35.0~12:04:55.0'
+# mode='manual' timerange='11:55:30.0~11:56:45.0'
+
+# Poor phases in leakage scan in ea25
+mode='manual' antenna='ea25' intent='*LEAK*'

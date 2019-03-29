@@ -1,0 +1,19 @@
+# d_track16
+# 14A-235.sb29590027.eb29596487.56890.46132725694
+
+# Flag HI absorption on diff. cals
+# Original flagging script has much wider range of channels flagged. Why??
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Poor time ranges
+mode='manual' antenna='ea18,ea19,ea20,ea21' timerange='11:27:22.5,12:21:07.5,11:41:07.5~11:42:17.5'
+
+mode='manual' antenna='ea03,ea08,ea17,ea12' timerange='11:41:02.5'
+
+mode='manual' antenna='ea26' timerange='11:15:07.5~11:15:12.5'
+
+mode='manual' antenna='ea04&ea09;ea04&ea14;ea03&ea22;ea06&ea07;ea07&ea18;ea07&ea19;ea07&ea23;ea15&ea16;ea16&ea19;ea16&ea26;ea19&ea21;ea20&ea23' timerange='11:41:02.5'
+
+mode='manual' scan='61'

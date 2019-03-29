@@ -14,6 +14,9 @@ import pipeline.hif.heuristics.findrefant as findrefant
 # Ignore any as refants??
 refantignore = ""
 
+mySDM = sys.argv[-1]
+myvis = mySDM if mySDM.endswith("ms") else mySDM + ".ms"
+
 # if not os.path.exists("cont.dat"):
 #     raise ValueError("The cont.dat file is not in the pipeline directory.")
 
@@ -116,7 +119,7 @@ try:
              bandtype='B',
              smodel=[],
              append=False,
-             fillgaps=50,
+             fillgaps=400,
              docallib=False,
              gaintable=gaintables,
              gainfield=[''],
@@ -191,7 +194,7 @@ try:
              bandtype='B',
              smodel=[],
              append=False,
-             fillgaps=50,
+             fillgaps=400,
              docallib=False,
              gaintable=gaintables,
              gainfield=[''],
@@ -249,7 +252,7 @@ try:
              bandtype='B',
              smodel=[],
              append=False,
-             fillgaps=50,
+             fillgaps=400,
              docallib=False,
              gaintable=gaintables,
              gainfield=[''],

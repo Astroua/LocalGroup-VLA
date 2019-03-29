@@ -1,0 +1,16 @@
+# d_track6
+# 14A-235.sb29371560.eb29588511.56884.49103833333
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Noisy baselines in scan 17
+mode='manual' antenna='ea01&ea20;ea01&ea22;ea20&ea22;ea04&ea26;ea17&ea28;ea19&ea28;ea06&ea20;ea06&ea07;ea07&ea20;ea01&ea07;ea02&ea06;ea04&ea25;ea07&ea22;ea18&ea28;ea22&ea28'
+
+# Low amps in ea08
+mode='manual' antenna='ea08' scan='2~25'
+
+# Low amps in ea27
+mode='manual' antenna='ea27'

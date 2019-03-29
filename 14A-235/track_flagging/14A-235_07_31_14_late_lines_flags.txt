@@ -1,0 +1,26 @@
+# d_track3
+# 14A-235.sb29371209.eb29511924.56869.44281552083
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+mode='manual' spw='3880~4095'
+
+# Poor phases in scan 3
+mode='manual' antenna='ea15,ea20' scan='3'
+
+mode='manual' antenna='ea12' timerange='13:52:45.0~13:52:50.0'
+
+mode='manual' antenna='ea12' intent='*PHASE*' scan='17~43'
+
+# Low amps in ea28
+mode='manual' antenna='ea28'
+
+# Bad baselines
+mode='manual' scan='43' antenna='ea08&ea19;ea11&ea19;ea02&ea06;ea06&ea07;ea06&ea20;ea06&ea27;ea01&ea20;ea07&ea20;ea08&ea20;ea20&ea22;ea01&ea08;ea08&ea22;ea08&ea26;ea08&ea28;ea01&ea07;ea01&ea22;ea25&ea26;ea11&ea25;ea02&ea27;ea12&ea27'
+
+mode='manual' scan='52' antenna='ea04&ea19;ea08&ea19;ea18&ea19;ea19&ea22;ea19&ea25;ea19&ea26;ea19&ea28;ea02&ea06;ea06&ea07;ea06&ea20;ea07&ea20;ea08&ea20;ea20&ea22;ea01&ea08;ea04&ea08;ea08&ea22;ea08&ea28;ea01&ea07;ea01&ea22;ea01&ea20;ea25&ea26;ea08&ea26'
+
+mode='manual' scan='61' antenna='ea01&ea22'
