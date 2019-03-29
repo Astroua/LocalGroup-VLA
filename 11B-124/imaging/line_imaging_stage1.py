@@ -56,15 +56,25 @@ image_name = os.path.join(output_path,
                           .format("HI", spw_num))
 
 if os.path.exists("{}.image".format(image_name)):
+    # Need to delete the old mask to use auto masking
+    os.system("rm -rf {}.mask".format(image_name))
     calcres = False
     calcpsf = False
     nsigma = 2.
     cycleniter = 2000
+    usemask = 'auto-multithresh'
+    minpercentchange = 2.
+    noisethreshold = 3.
+    lownoisethreshold = 1.5
+    pbmask = 0.05
+    sidelobethreshold = 2.
+    minbeamfrac = 0.1
 else:
     calcres = True
     calcpsf = True
     nsigma = 5.
     cycleniter = 1000
+    usemask = 'pb'
 
 tclean(vis=myvis,
        datacolumn='corrected',
@@ -87,7 +97,7 @@ tclean(vis=myvis,
        restfreq="1.420405752GHz",
        outframe='LSRK',
        pblimit=mypblimit,
-       usemask='pb',
+       usemask=usemask,
        mask=None,
        deconvolver='multiscale',
        scales=[0, 5, 10, 50],

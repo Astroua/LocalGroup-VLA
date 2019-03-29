@@ -4,7 +4,7 @@ Create a dirty for the given SPW
 
 Should be run from the 13A-213_imaging folder on cedar
 
-Stage 1 cleaning - no clean mask down to 5-sigma
+Stage 1 cleaning - clean to 5-sigma WITH auto-masking
 '''
 
 import os
@@ -63,6 +63,8 @@ casalog.post("Image size: {}".format(myimagesize))
 # Image ALL channels in the MS. Just looking for reduction issues
 default('tclean')
 
+# Initially clean to 5-sigma WITH automasking!
+
 tclean(vis=myvis,
        datacolumn='corrected',
        imagename=os.path.join(output_path, imgname),
@@ -84,8 +86,6 @@ tclean(vis=myvis,
        restfreq="1.420405752GHz",
        outframe='LSRK',
        pblimit=mypblimit,
-       usemask='pb',
-       mask=None,
        deconvolver='multiscale',
        scales=[0, 5, 10, 50],  # Need to change b/w C+D vs D??
        pbcor=False,
@@ -94,4 +94,13 @@ tclean(vis=myvis,
        restoration=True,
        parallel=True,
        cycleniter=1000,  # Force a lot of major cycles
+       usemask='auto-multithresh',
+       mask=None,
+       pbmask=0.1,
+       minpercentchange=2.,
+       noisethreshold=4.,
+       lownoisethreshold=1.5,
+       sidelobethreshold=2.,
+       minbeamfrac=0.1,
+       verbose=True,
        )
