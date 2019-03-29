@@ -77,7 +77,7 @@ if casa_version > 500:
     sys.exit("Your CASA version is "+casa['build']['version']+", please re-start using CASA 5.0.0")
 
 # Define location of pipeline
-pipepath = os.path.expanduser('~/LocalGroup-VLA/11B-124/pipeline5.0.0/')
+pipepath = os.path.expanduser('~/LocalGroup-VLA/12A-304/pipeline5.0.0/')
 
 #This is the default time-stamped casa log file, in case we
 #    need to return to it at any point in the script

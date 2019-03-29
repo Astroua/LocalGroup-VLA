@@ -17,6 +17,10 @@ logprint("Looking for custom flag script", logfileout='logs/custom_flagging.log'
 if os.path.exists(full_flag_filename):
     copyfile(full_flag_filename,
              "additional_flagging.txt")
+
+# Could have copied over beforehand. Check before skipping
+if os.path.exists("additional_flagging.txt"):
+
     logprint("Found additional flagging script.", logfileout='logs/custom_flagging.log')
 
     # Now run flagdata and flagmanager
