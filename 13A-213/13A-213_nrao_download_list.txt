@@ -1,0 +1,13 @@
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb14411141.eb19435215.56367.81414491898.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb20685305.eb20706999.56398.113012800924.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb20685305.eb20820921.56405.00397291667.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb16229244.eb20881250.56407.994360578705.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb20493306.eb21732269.56426.55943959491.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb20683830.eb21918128.56427.38029568287.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb20493306.eb23015836.56439.524362592594.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb23939073.eb24079539.56478.88506108796.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb23939073.eb24085722.56480.817369131946.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb23939073.eb24124455.56487.81900869213.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb23938537.eb24172212.56503.318132465276.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb23938537.eb24200712.56506.30788959491.tar
+ftp://ftp.aoc.nrao.edu/e2earchive/13A-213.sb23938537.eb24205612.56507.30083792824.tar
