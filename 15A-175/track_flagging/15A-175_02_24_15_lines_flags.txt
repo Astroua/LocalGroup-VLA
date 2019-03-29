@@ -1,0 +1,17 @@
+# dtrack1 in sbkey.txt
+# 14A-235.sb29371209.eb29491483.56855.45020903935
+
+# Extra edge flagging
+mode='manual' spw='3880~4095'
+
+# Flag HI absorption on diff. cals
+mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+mode='manual' intent='*PHASE*' spw='0:2080~2350'
+mode='manual' intent='*LEAK*' spw='0:2070~2180'
+
+# Poor ea12 phase solutions
+mode='manual' intent='*PHASE*' antenna='ea12' scan='25~61'
+
+# ea16 has poor phase solutions
+# Check first that this wasn't a bad ant pos'n
+# mode='manual' antenna='ea16'
