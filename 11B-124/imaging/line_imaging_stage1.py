@@ -63,12 +63,6 @@ if os.path.exists("{}.image".format(image_name)):
     nsigma = 2.
     cycleniter = 2000
     usemask = 'auto-multithresh'
-    minpercentchange = 2.
-    noisethreshold = 3.
-    lownoisethreshold = 1.5
-    pbmask = 0.05
-    sidelobethreshold = 2.
-    minbeamfrac = 0.1
 else:
     calcres = True
     calcpsf = True
@@ -109,4 +103,10 @@ tclean(vis=myvis,
        cycleniter=cycleniter,  # Force a lot of major cycles
        calcres=calcres,
        calcpsf=calcpsf,
+       minpercentchange=2.,  # Auto-mask settings for stage 2
+       noisethreshold=3.,
+       lownoisethreshold=1.5,
+       pbmask=0.05,
+       sidelobethreshold=2.,
+       minbeamfrac=0.1,
        )
