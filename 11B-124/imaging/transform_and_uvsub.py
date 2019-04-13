@@ -39,17 +39,8 @@ mstransform(vis=myvis, outputvis=out_vis, spw=str(spw_num),
 out_vis_cs = "11B-124_{0}_spw_{1}_LSRK.ms.contsub"\
     .format(line_name, spw_num)
 
-out_mms_vis_cs = "11B-124_{0}_spw_{1}_LSRK.mms.contsub"\
-     .format(line_name, spw_num)
+casalog.post("Running uvcontsub")
 
-# The operation is much fast in parallel, so make an MMS and then
-# convert back
-partition(vis=out_vis, outputvis=out_vis[:-3] + ".mms", createmms=True,
-          separationaxis='auto', flagbackup=False)
-
-uvcontsub(vis=out_vis[:-3] + ".mms",
+uvcontsub(vis=out_vis,
           fitspw='0:30~100;876~1070',
           fitorder=0, want_cont=False)
-
-default('split')
-split(vis=out_mms_vis_cs, outputvis=out_vis_cs, keepmms=False)
