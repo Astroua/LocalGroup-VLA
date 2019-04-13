@@ -7,15 +7,15 @@ import os
 import sys
 from glob import glob
 
-from tasks import virtualconcat, mstransform
+from tasks import concat, mstransform
 
-# Grab all of the MS tracks in the folder (should be 17)
-myvis = glob("*.ms")
+# Grab all of the MS tracks in the folder (should be 10)
+myvis = glob("orig_ms/*.ms")
 
 assert len(myvis) == 10
 
 default('concat')
-virtualconcat(vis=myvis, concatvis='11B-124_lines_all.ms')
+concat(vis=myvis, concatvis='11B-124_lines_all.ms')
 
 default('mstransform')
 mstransform(vis='11B-124_lines_all.ms',
