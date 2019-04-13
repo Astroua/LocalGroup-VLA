@@ -9,8 +9,8 @@ from glob import glob
 
 from tasks import concat, mstransform
 
-# Grab all of the MS tracks in the folder (should be 17)
-myvis = glob("*.ms")
+# Grab all of the MS tracks in the folder (should be 10)
+myvis = glob("orig_ms/*.ms")
 
 assert len(myvis) == 10
 
