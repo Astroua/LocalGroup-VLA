@@ -35,7 +35,6 @@ mstransform(vis=myvis, outputvis=out_vis, spw=str(spw_num),
 # Separate uvcontsub for HI
 out_vis_cs = "{}_LSRK.ms.contsub".format(myvis.rstrip(".ms"))
 
-
 uvcontsub(vis=out_vis,
           fitspw=galaxy_dict[gal_name.lower()]['cont_range'],
           fitorder=0, want_cont=False)

@@ -14,7 +14,7 @@ from glob import glob
 # Load in the auto image parameter setters
 from CASA_functions import set_cellsize, set_imagesize
 
-from tasks import tclean, virtualconcat, split
+from tasks import tclean, concat, split
 
 data_folder = sys.argv[-2]
 spw_num = int(sys.argv[-1])
@@ -78,7 +78,7 @@ if not os.path.exists(concat_vis):
         raise ValueError("Found no tracks.")
 
     # Concatenate corrected data column for that SPW
-    virtualconcat(vis=myviss, concatvis=concat_vis)
+    concat(vis=myviss, concatvis=concat_vis, timesort=False)
 
 myvis = concat_vis
 
