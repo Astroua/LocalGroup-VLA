@@ -23,7 +23,7 @@ if not os.path.exists(output_path):
     os.mkdir(output_path)
 
 # Grab all of the MS tracks in the folder (should be 17)
-myvis = "11B-124_HI_spw_0_LSRK.mms.contsub"
+myvis = "11B-124_HI_spw_0_LSRK.ms.contsub"
 
 # Run listobs
 listobs(vis=myvis)
