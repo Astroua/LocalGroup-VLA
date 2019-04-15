@@ -58,6 +58,7 @@ image_name = os.path.join(output_path,
 if os.path.exists("{}.image".format(image_name)):
     # Need to delete the old mask to use auto masking
     os.system("rm -rf {}.mask".format(image_name))
+    os.system("rm -rf {}.workdirectory/{}.mask".format(image_name))
     calcres = False
     calcpsf = False
     nsigma = 2.
