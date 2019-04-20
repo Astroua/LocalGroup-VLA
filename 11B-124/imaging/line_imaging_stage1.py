@@ -23,7 +23,7 @@ if not os.path.exists(output_path):
     os.mkdir(output_path)
 
 # Grab all of the MS tracks in the folder (should be 17)
-myvis = "11B-124_HI_spw_0_LSRK.mms.contsub"
+myvis = "11B-124_HI_spw_0_LSRK.ms.contsub"
 
 # Run listobs
 listobs(vis=myvis)
@@ -58,6 +58,7 @@ image_name = os.path.join(output_path,
 if os.path.exists("{}.image".format(image_name)):
     # Need to delete the old mask to use auto masking
     os.system("rm -rf {}.mask".format(image_name))
+    os.system("rm -rf {}.workdirectory/{}.mask".format(image_name))
     calcres = False
     calcpsf = False
     nsigma = 2.
