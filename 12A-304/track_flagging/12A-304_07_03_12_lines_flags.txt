@@ -1,24 +1,28 @@
 mode='manual' spw='0~15:0~10'
 mode='manual' spw='0~15:117~127'
-mode='manual' spw='0:42~70' intent='*CALIBRATE_FLUX*
-mode='manual' spw='0:42~70' intent='*CALIBRATE_AMP*
-mode='manual' antenna='ea23,ea26'
-mode='manual' antenna='ea05&&ea14'
-mode='manual' antenna='ea04&&ea19'
-mode='manual' antenna='ea24&&ea19'
-mode='manual' antenna='ea09&&ea21'
+mode='manual' spw='0:34~70' intent='*CALIBRATE_FLUX*
+mode='manual' spw='0:34~70' intent='*CALIBRATE_AMP*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_FLUX*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_AMP*
+
 mode='manual' field='3C48' spw='12' timerange='07:30:02.5'
 mode='manual' field='3C48' spw='12' timerange='07:30:32.5'
 mode='manual' field='3C48' spw='12' timerange='07:30:42.5'
 mode='manual' field='3C48' spw='12' timerange='07:31:02.5'
-mode='manual' field='3C48' spw='12' timerange='07:32:02.5~07:32:12.5'
-mode='manual' field='3C48' spw='12' timerange='07:32:22.5'
-mode='manual' field='3C48' spw='12' timerange='07:32:32.5'
-mode='manual' field='3C48' spw='12' timerange='07:32:42.5~07:32:50'
 mode='manual' field='3C48' spw='12' timerange='07:33:52.5'
 mode='manual' field='3C48' spw='12' timerange='07:34:42.5'
 mode='manual' field='3C48' spw='12' timerange='07:35:02.5'
 mode='manual' field='3C48' spw='12' timerange='07:35:27.5'
 mode='manual' field='3C48' spw='12' timerange='07:35:57.5'
-mode='manual' field='3C48' spw='12' timerange='07:36:02.5~07:36:07.5'
-mode='manual' field='3C48' spw='12' timerange='07:36:37.5~07:36:47.5'
+
+mode='manual' scan='3' spw='12' timerange='<07:33:00'
+mode='manual' scan='3' spw='12' timerange='>07:36:00'
+
+mode='manual' antenna='ea26,ea05,ea14,ea28,ea19,ea04'
+
+mode='manual' scan='2' timerange='<07:29:50'
+mode='manual' scan='4' timerange='<07:38:00'
+mode='manual' scan='96' timerange='<09:32:20'
+mode='manual' scan='44' timerange='<08:29:20'
+
+mode='manual' scan='29'

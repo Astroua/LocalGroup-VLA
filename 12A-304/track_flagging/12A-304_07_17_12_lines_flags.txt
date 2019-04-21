@@ -1,5 +1,25 @@
 mode='manual' spw='0~15:0~10'
 mode='manual' spw='0~15:117~127'
-mode='manual' spw='0:42~70' intent='*CALIBRATE_FLUX*
-mode='manual' spw='0:42~70' intent='*CALIBRATE_AMP*
-mode='manual' antenna='ea28'
+mode='manual' spw='0:34~70' intent='*CALIBRATE_FLUX*
+mode='manual' spw='0:34~70' intent='*CALIBRATE_AMP*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_FLUX*
+mode='manual' spw='8:90~127' intent='*CALIBRATE_AMP*
+
+mode='manual' antenna='ea08,ea25,ea28,ea04'
+
+mode='manual' scan='2' timerange='<07:47:00'
+# Ripple in amps in scan 3
+mode='manual' scan='3'
+
+mode='manual' scan='4' timerange='<07:59:00'
+mode='manual' scan='17' timerange='<08:14:20'
+mode='manual' scan='83' timerange='<09:36:20'
+mode='manual' scan='84' timerange='<09:39:15'
+mode='manual' scan='44' timerange='<08:49:10'
+
+mode='manual' antenna='ea23' scan='4'
+mode='manual' antenna='ea23' scan='30~43' spw='0~7'
+
+mode='manual' antenna='ea01' scan='43' spw='0~7'
+
+mode='manual' antenna='ea07&&ea24'

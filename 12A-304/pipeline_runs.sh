@@ -266,3 +266,53 @@ cd 12A-304_06_20_12
 # ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
 cp -r products $backup_loc/12A-304_06_20_12
 cd ../
+
+cd 12A-304_06_27_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_06_27_12
+cd ../
+
+cd 12A-304_06_28_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_06_28_12
+cd ../
+
+cd 12A-304_06_29_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_06_29_12
+cd ../
+
+cd 12A-304_06_30_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_06_30_12
+cd ../
+
+cd 12A-304_07_03_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_07_03_12
+cd ../
+
+cd 12A-304_07_04_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_07_04_12
+cd ../
+
+cd 12A-304_07_05_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_07_05_12
+cd ../
+
+cd 12A-304_07_16_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_07_16_12
+cd ../
+
+cd 12A-304_07_17_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_07_17_12
+cd ../
+
+cd 12A-304_08_25_12
+# ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
+cp -r products $backup_loc/12A-304_08_25_12
+cd ../
