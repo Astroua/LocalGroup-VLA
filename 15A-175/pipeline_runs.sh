@@ -21,8 +21,6 @@ cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/15A-175/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
-XXX
-
 export track_folder='15A-175_02_09_15'
 export track_name='15A-175.sb30134708.eb30359405.57062.017486770834'
 
