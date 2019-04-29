@@ -1,4 +1,4 @@
-# dtrack1 in sbkey.txt
+# btrack11 in sbkey.txt
 # 14A-235.sb29371209.eb29491483.56855.45020903935
 
 # Extra edge flagging
