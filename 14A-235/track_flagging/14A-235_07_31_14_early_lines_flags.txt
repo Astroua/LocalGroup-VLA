@@ -11,3 +11,17 @@ mode='manual' intent='*PHASE*' antenna='ea12' scan='3~34'
 
 mode='manual' antenna='ea07' timerange='08:16:37.5'
 mode='manual' antenna='ea07' timerange='08:17:02.5'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<10:33:00'
+mode='manual' scan='2' timerange='<07:25:00'
+mode='manual' scan='34' timerange='<09:04:05'
+mode='manual' scan='61' timerange='<10:20:20'
+mode='manual' scan='6' timerange='07:38:20~07:38:40'
+mode='manual' scan='11' timerange='<07:53:30'
+mode='manual' scan='18' timerange='<08:17:45'
+
+mode='manual' antenna='ea28'

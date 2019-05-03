@@ -15,8 +15,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -30,26 +30,26 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
-export track_folder='14A-235_07_20_14'
-export track_name='14A-235.sb29371209.eb29502506.56858.460165509256'
+# export track_folder='14A-235_07_20_14'
+# export track_name='14A-235.sb29371209.eb29502506.56858.460165509256'
 
-mkdir $track_folder
-mv "${raw_data_path}/${track_name}.tar" $track_folder
-cd $track_folder
-tar -xf "${track_name}.tar"
-~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-# Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
-cd "${track_folder}_speclines"
-~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
-cd ../../
+# mkdir $track_folder
+# mv "${raw_data_path}/${track_name}.tar" $track_folder
+# cd $track_folder
+# tar -xf "${track_name}.tar"
+# ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
+# # Save space by removing intermediate products
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
+# cd "${track_folder}_speclines"
+# ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
+# cd ../../
 
 export track_folder='14A-235_07_25_14'
 export track_name='14A-235.sb29418542.eb29508034.56863.29090856481'
@@ -60,8 +60,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -75,8 +75,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -89,8 +89,8 @@ mv "${raw_data_path}/${track_name}.tar" $track_folder
 cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
-# Save space by removing intermediate products
-rm -f "${track_name}.tar"
+# # Save space by removing intermediate products
+# rm -f "${track_name}.tar"
 rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
@@ -105,8 +105,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -120,8 +120,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -135,8 +135,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -150,8 +150,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -165,8 +165,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -180,8 +180,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -195,8 +195,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -272,8 +272,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -287,8 +287,8 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
@@ -302,75 +302,123 @@ cd $track_folder
 tar -xf "${track_name}.tar"
 ~/casa-release-5.4.1-32.el6/bin/casa --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/ms_split.py $track_name F lines
 # Save space by removing intermediate products
-rm -f "${track_name}.tar"
-rm -rf "${track_name}.ms"*
+# rm -f "${track_name}.tar"
+# rm -rf "${track_name}.ms"*
 cd "${track_folder}_speclines"
 ~/casa-release-5.4.1-32.el6/bin/casa --pipeline --nogui --log2term -c ~/LocalGroup-VLA/14A-235/pipeline_scripts/casa_pipeline_lines.py "${track_name}.speclines.ms"
 cd ../../
 
-# Reset pipeline directory
-# rm -rf 14A-235*.ms* 12A-304*.fluxdensities *.txt *.b *.g *.ms *.log *.k final* pipeline_shelf.restore weblog scan_plots logs *.png *.last pipeline* byant byspw flux* image_outputs products
 
 # Backups onto kant
 export backup_loc="/home/koch.473/kant/VLA_tracks/14A-235/pipeline_products"
 
-cd 14A-235_07_17_14
+cd 14A-235_07_17_14/14A-235_07_17_14_speclines
 cp -r products $backup_loc/14A-235_07_17_14
-cd ..
-cd 14A-235_07_18_14
+cd ../..
+cd 14A-235_07_18_14/14A-235_07_18_14_speclines
 cp -r products $backup_loc/14A-235_07_18_14
-cd ..
-cd 14A-235_07_20_14
-cp -r products $backup_loc/14A-235_07_20_14
-cd ..
-cd 14A-235_07_25_14
+cd ../..
+# cd 14A-235_07_20_14/14A-235_07_20_14_speclines
+# cp -r products $backup_loc/14A-235_07_20_14
+# cd ../..
+cd 14A-235_07_25_14/14A-235_07_25_14_speclines
 cp -r products $backup_loc/14A-235_07_25_14
-cd ..
-cd 14A-235_07_26_14
+cd ../..
+cd 14A-235_07_26_14/14A-235_07_26_14_speclines
 cp -r products $backup_loc/14A-235_07_26_14
-cd ..
-cd 14A-235_07_27_14
+cd ../..
+cd 14A-235_07_27_14/14A-235_07_27_14_speclines
 cp -r products $backup_loc/14A-235_07_27_14
-cd ..
-cd 14A-235_07_28_14
+cd ../..
+cd 14A-235_07_28_14/14A-235_07_28_14_speclines
 cp -r products $backup_loc/14A-235_07_28_14
-cd ..
-cd 14A-235_07_29_14
+cd ../..
+cd 14A-235_07_29_14/14A-235_07_29_14_speclines
 cp -r products $backup_loc/14A-235_07_29_14
-cd ..
-cd 14A-235_07_31_14_early
+cd ../..
+cd 14A-235_07_31_14_early/14A-235_07_31_14_early_speclines
 cp -r products $backup_loc/14A-235_07_31_14_early
-cd ..
-cd 14A-235_07_31_14_late
+cd ../..
+cd 14A-235_07_31_14_late/14A-235_07_31_14_late_speclines
 cp -r products $backup_loc/14A-235_07_31_14_late
-cd ..
-cd 14A-235_08_02_14
+cd ../..
+cd 14A-235_08_02_14/14A-235_08_02_14_speclines
 cp -r products $backup_loc/14A-235_08_02_14
-cd ..
-cd 14A-235_08_04_14
+cd ../..
+cd 14A-235_08_04_14/14A-235_08_04_14_speclines
 cp -r products $backup_loc/14A-235_08_04_14
-cd ..
-cd 14A-235_08_08_14
+cd ../..
+cd 14A-235_08_08_14/14A-235_08_08_14_speclines
 cp -r products $backup_loc/14A-235_08_08_14
-cd ..
-# cd 14A-235_08_09_14
+cd ../..
+# cd 14A-235_08_09_14/14A-235_08_09_14_speclines
 # cp -r products $backup_loc/14A-235_08_09_14
-# cd ..
-# cd 14A-235_08_10_14
+# cd ../..
+# cd 14A-235_08_10_14/14A-235_08_10_14_speclines
 # cp -r products $backup_loc/14A-235_08_10_14
-# cd ..
-# cd 14A-235_08_11_14_early
+# cd ../..
+# cd 14A-235_08_11_14_early/14A-235_08_11_14_early_speclines
 # cp -r products $backup_loc/14A-235_08_11_14_early
-# cd ..
-# cd 14A-235_08_11_14_late
+# cd ../..
+# cd 14A-235_08_11_14_late/14A-235_08_11_14_late_speclines
 # cp -r products $backup_loc/14A-235_08_11_14_late
-cd ..
-cd 14A-235_08_15_14
+cd ../..
+cd 14A-235_08_15_14/14A-235_08_15_14_speclines
 cp -r products $backup_loc/14A-235_08_15_14
-cd ..
-cd 14A-235_08_17_14
+cd ../..
+cd 14A-235_08_17_14/14A-235_08_17_14_speclines
 cp -r products $backup_loc/14A-235_08_17_14
-cd ..
-cd 14A-235_08_18_14
-cp -r products $backup_loc/14A-235_08_18_14
-cd ..
+cd ../..
+cd 14A-235_08_21_14/14A-235_08_21_14_speclines
+cp -r products $backup_loc/14A-235_08_21_14
+cd ../..
+
+# Move calibrated MS to own directory
+
+export export_data_path='/home/koch.473/VLA_tracks/14A-235/'
+
+cd 14A-235_07_17_14/14A-235_07_17_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_18_14/14A-235_07_18_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_25_14/14A-235_07_25_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_26_14/14A-235_07_26_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_27_14/14A-235_07_27_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_28_14/14A-235_07_28_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_29_14/14A-235_07_29_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_31_14_early/14A-235_07_31_14_early_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_07_31_14_late/14A-235_07_31_14_late_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_08_02_14/14A-235_08_02_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_08_04_14/14A-235_08_04_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_08_08_14/14A-235_08_08_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_08_15_14/14A-235_08_15_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_08_17_14/14A-235_08_17_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..
+cd 14A-235_08_21_14/14A-235_08_21_14_speclines/
+mv 14A-235*.speclines.ms $export_data_path/
+cd ../..

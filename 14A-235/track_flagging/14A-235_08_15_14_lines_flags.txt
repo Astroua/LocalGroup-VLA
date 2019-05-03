@@ -14,3 +14,28 @@ mode='manual' antenna='ea08' scan='2~25'
 
 # Low amps in ea27
 mode='manual' antenna='ea27'
+
+# uv scatter
+mode='manual' antenna='ea14'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<14:58:00'
+mode='manual' scan='2' timerange='<11:54:00'
+mode='manual' scan='25' timerange='<13:05:30'
+mode='manual' scan='34' timerange='<13:31:00'
+mode='manual' scan='52' timerange='<14:20:50'
+mode='manual' scan='15' timerange='<12:22:10'
+mode='manual' scan='14' timerange='<12:34:05'
+mode='manual' scan='18' timerange='<12:45:50'
+mode='manual' scan='35' timerange='<13:33:30'
+mode='manual' scan='53' timerange='<14:23:15'
+
+# Amp scatter
+mode='manual' scan='17' antenna='ea13,ea16'
+
+mode='manual' antenna='ea13&&ea18'
+
+mode='manual' antenna='ea03'

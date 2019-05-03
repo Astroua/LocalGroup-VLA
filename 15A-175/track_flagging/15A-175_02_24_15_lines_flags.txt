@@ -1,17 +1,50 @@
 # btrack11 in sbkey.txt
 # 14A-235.sb29371209.eb29491483.56855.45020903935
 
+# NOTE: Using 3C138 for flux/delay/BP cal due to lack of
+# usable data in the 3C48 scans.
+
 # Extra edge flagging
 mode='manual' spw='3880~4095'
 
 # Flag HI absorption on diff. cals
-mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
-mode='manual' intent='*PHASE*' spw='0:2080~2350'
-mode='manual' intent='*LEAK*' spw='0:2070~2180'
+#mode='manual' intent='*BANDPASS*' spw='0:2075~2200'
+#mode='manual' intent='*PHASE*' spw='0:2080~2350'
+#mode='manual' intent='*LEAK*' spw='0:2070~2180'
+# From original flagging script but these are far offset
+# from ~0 km/s. Using ones below but noting that there is
+# significant scatter due to lack of good data on 3C48
+
+mode='manual' intent='*PHASE*' spw='0:1200~1400'
+mode='manual' intent='*BANDPASS*' spw='0:1200~1400'
+mode='manual' intent='*ANGLE*' spw='0:1200~1400'
 
 # Poor ea12 phase solutions
-mode='manual' intent='*PHASE*' antenna='ea12' scan='25~61'
+# mode='manual' intent='*PHASE*' antenna='ea12' scan='25~61'
+# Looks fine in the re-run
 
 # ea16 has poor phase solutions
 # Check first that this wasn't a bad ant pos'n
 # mode='manual' antenna='ea16'
+# Looks fine in the re-run
+
+# SPW 1 (OH1612) has consistent RFI
+# it's recoverable but only concerned with HI right now
+mode='manual' spw='1'
+
+mode='manual' spw='0:3713~3715'
+
+mode='manual' scan='2' timerange='<23:25:45'
+mode='manual' scan='54' timerange='<02:15:00'
+#mode='manual' scan='3' timerange='<23:38:20'
+mode='manual' scan='4' timerange='<23:38:20'
+mode='manual' scan='13' timerange='<00:08:00'
+mode='manual' scan='45' timerange='<01:45:00'
+mode='manual' scan='30' timerange='<00:59:30'
+mode='manual' scan='38' timerange='<01:23:45'
+
+mode='manual' scan='2' antenna='ea05&&ea27'
+mode='manual' scan='21' antenna='ea07'
+
+mode='manual' antenna='ea22,ea27'
+

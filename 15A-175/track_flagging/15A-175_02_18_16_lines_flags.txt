@@ -1,2 +1,29 @@
 # c_track11
 # 15A-175.sb31622324.eb31864321.57436.01421613426
+
+# Extra edge flagging
+# mode='manual' spw='3880~4095'
+
+
+# HI absorption on phasecal.
+mode='manual' intent='*PHASE*' spw='0:1200~1400'
+
+# HI absorption on bpcal.
+mode='manual' intent='*BANDPASS*' spw='0:1200~1400'
+
+mode='manual' intent='*ANGLE*' spw='0:1200~1400'
+
+# SPW 1 (OH1612) has consistent RFI
+# it's recoverable but only concerned with HI right now
+mode='manual' spw='1'
+
+mode='manual' spw='0:3713~3715'
+
+# BP scatter
+mode='manual' antenna='ea24'
+
+mode='manual' scan='2' timerange='<00:24:00'
+mode='manual' scan='54' timerange='<03:13:00'
+mode='manual' scan='4' timerange='<00:36:40'
+mode='manual' scan='22' timerange='<01:33:40'
+mode='manual' scan='30' timerange='<01:57:50'

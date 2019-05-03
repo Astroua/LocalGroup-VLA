@@ -7,4 +7,18 @@ mode='manual' intent='*PHASE*' spw='0:2080~2350'
 mode='manual' intent='*LEAK*' spw='0:2070~2180'
 
 # ea12 has poor phase solutions
-# mode='manual' antenna='ea12'
+mode='manual' antenna='ea12'
+
+mode='manual' scan='63' timerange='<10:12:00'
+mode='manual' scan='2' timerange='<07:01:00'
+mode='manual' scan='10' timerange='<07:29:30'
+mode='manual' scan='13' timerange='<07:38:10'
+
+mode='manual' scan='14~21' spw='1'
+mode='manual' scan='24' spw='1' timerange='>08:15:10'
+mode='manual' scan='47~48' spw='1'
+mode='manual' scan='13' spw='1'
+mode='manual' scan='8' spw='1' timerange='<07:23:30'
+
+#mode='clip', datacolumn='DATA',
+#        timeavg=True, timebin='2s', channelavg=True, chanbin=2

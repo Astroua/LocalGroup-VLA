@@ -1,2 +1,30 @@
 # c_track3
 # 15A-175.sb31621972.eb31740192.57416.862559490735
+
+# Extra edge flagging
+mode='manual' spw='3880~4095'
+
+# HI absorption on phasecal.
+mode='manual' intent='*PHASE*' spw='0:1200~1400'
+
+# HI absorption on bpcal.
+mode='manual' intent='*BANDPASS*' spw='0:1200~1400'
+
+mode='manual' intent='*ANGLE*' spw='0:1200~1400'
+
+
+# SPW 1 (OH1612) has consistent RFI
+# it's recoverable but only concerned with HI right now
+mode='manual' spw='1'
+
+mode='manual' spw='0:3713~3715'
+
+# from log email
+# antenna 5 data lost (elevation motor 1 fault)
+# antenna 1 data lost (recent synthesizer softare upgrade did not work)
+
+# mode='manual' antenna='ea24' correlation='LL'
+# mode='manual' antenna='ea11&ea15;ea04&ea12'
+
+# calibrated phase vs time shows some bad data for early time ranges (>10 deg)
+# need to look for this.

@@ -316,3 +316,7 @@ cd 12A-304_08_25_12
 # ~/anaconda3/bin/python ~/LocalGroup-VLA/script_pipeline_backup.py $backup_loc
 cp -r products $backup_loc/12A-304_08_25_12
 cd ../
+
+# Copy over final MSs
+
+

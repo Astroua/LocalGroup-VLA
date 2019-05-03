@@ -8,3 +8,23 @@ mode='manual' intent='*LEAK*' spw='0:2070~2180'
 
 # Poor phases in ea12
 mode='manual' antenna='ea12'
+
+# Large delays
+mode='manual' antenna='ea21,ea24'
+
+# Consistently poor sol'ns with this gain scan
+mode='manual' scan='34'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<11:19:00'
+mode='manual' scan='2' timerange='<08:11:30'
+mode='manual' scan='25' timerange='<09:24:00'
+mode='manual' scan='34' timerange='<09:50:10'
+mode='manual' scan='11' timerange='<08:39:40'
+mode='manual' scan='18' timerange='<09:03:50'
+mode='manual' scan='35' timerange='<09:53:40'
+mode='manual' scan='46' timerange='<10:24:10'
+mode='manual' scan='13' timerange='<08:46:00'

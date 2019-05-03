@@ -12,3 +12,18 @@ mode='manual' antenna='ea27'
 # Low amps in ea01 and ea02? Check this
 # mode='manual' antenna='ea01,ea02'
 
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<14:25:00'
+mode='manual' scan='63' timerange='>14:29:40'
+mode='manual' scan='2'
+mode='manual' scan='4' timerange='<11:25:45'
+mode='manual' scan='12' timerange='<11:51:20'
+mode='manual' scan='18' timerange='<12:11:40'
+mode='manual' scan='37' timerange='<13:05:35'
+mode='manual' scan='13' timerange='<11:54:10'
+
+mode='manual' antenna='ea13&&ea18'
+mode='manual' antenna='ea24&&ea28'

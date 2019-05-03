@@ -1,3 +1,44 @@
 # btrack 3
 # 15A-175.sb30134512.eb30434584.57069.80891486111
 
+# Extra edge flagging
+# mode='manual' spw='3880~4095'
+
+
+# HI absorption on phasecal.
+mode='manual' intent='*PHASE*' spw='0:1200~1400'
+
+# HI absorption on bpcal.
+mode='manual' intent='*BANDPASS*' spw='0:1200~1400'
+
+mode='manual' intent='*ANGLE*' spw='0:1200~1400'
+
+# SPW 1 (OH1612) has consistent RFI
+# it's recoverable but only concerned with HI right now
+mode='manual' spw='1'
+
+mode='manual' spw='0:3713~3715'
+
+mode='manual' intent='*PHASE*' timerange='19:44:28.5~19:46:46.5'
+mode='manual' intent='*PHASE*' timerange='19:44:28.5~19:46:46.5'
+mode='manual' intent='*BANDPASS*' correlation='RR' timerange='19:28:22.5~19:29:25.5'
+
+# FUNKY stuff in the beginning of this scan
+mode='manual' scan='2' timerange='<19:30:00'
+mode='manual' scan='70' timerange='<23:18:00'
+mode='manual' scan='4' timerange='<19:40:00'
+mode='manual' scan='13' timerange='<20:10:10'
+mode='manual' scan='45' timerange='<21:54:00'
+mode='manual' scan='53' timerange='<22:20:05'
+mode='manual' scan='61' timerange='<22:46:15'
+mode='manual' scan='69' timerange='<23:12:10'
+mode='manual' scan='22' timerange='<20:39:10'
+mode='manual' scan='30' timerange='<21:05:07'
+mode='manual' scan='38' timerange='<21:31:05'
+mode='manual' scan='46' timerange='<21:57:00'
+mode='manual' scan='54' timerange='<22:23:20'
+mode='manual' scan='62' timerange='<22:49:22'
+
+
+mode='manual' scan='2' antenna='ea02'
+mode='manual' scan='62' antenna='ea12'

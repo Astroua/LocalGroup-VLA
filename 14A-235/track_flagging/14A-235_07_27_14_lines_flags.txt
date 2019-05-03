@@ -10,7 +10,8 @@ mode='manual' intent='*LEAK*' spw='0:2070~2180'
 mode='manual' spw='0:3880~4095'
 
 # Bad phases in ea12
-mode='manual' intent='*PHASE*' antenna='ea12' scan='25~52'
+# mode='manual' intent='*PHASE*' antenna='ea12' scan='25~52'
+mode='manual' antenna='ea12'
 # maybe in scan 3 too?
 
 # mode='manual' timerange='12:04:35.0~12:04:55.0'
@@ -18,3 +19,15 @@ mode='manual' intent='*PHASE*' antenna='ea12' scan='25~52'
 
 # Poor phases in leakage scan in ea25
 mode='manual' antenna='ea25' intent='*LEAK*'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now...
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<12:05:00'
+mode='manual' scan='2' timerange='<08:54:00'
+mode='manual' scan='11' timerange='<09:26:00'
+mode='manual' scan='26' timerange='<10:13:20'
+mode='manual' scan='35' timerange='<10:39:10'
+
+mode='manual' antenna='ea28'

@@ -1,2 +1,36 @@
 # b_track1
 # 15A-175.sb30134412.eb30449392.57076.002348842594
+
+# Extra edge flagging
+mode='manual' spw='3880~4095'
+
+
+# HI absorption on phasecal.
+# mode='manual' intent='*PHASE*' spw='0:1320~1340'
+mode='manual' intent='*PHASE*' spw='0:1200~1400'
+# ;3710~3720' -- this range was included in the original flagging
+# script. But that can't be MW absorption, right?
+
+# HI absorption on bpcal.
+mode='manual' intent='*BANDPASS*' spw='0:1200~1400'
+
+mode='manual' intent='*ANGLE*' spw='0:1200~1400'
+
+
+# SPW 1 (OH1612) has consistent RFI
+# it's recoverable but only concerned with HI right now
+mode='manual' spw='1'
+
+# baseline with low amp.
+mode='manual' antenna='ea13&ea19'
+
+# baselines with bad phase.
+#mode='manual' antenna='ea25&ea26;ea15&ea26;ea15&ea19;ea04&ea25;ea04&ea15;ea01&ea25;ea01&ea15;ea19&ea25;ea14&ea25;ea14&ea15' timerange='23:27:17.5~23:29:07.5'
+
+
+#phase vs time for phase cal
+# first scan in the begginning shows
+# large scatter in phase..
+# may need to do some sort of flagging similar to quack
+
+mode='manual' spw='0:3713~3715'

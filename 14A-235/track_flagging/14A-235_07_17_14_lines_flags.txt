@@ -14,4 +14,17 @@ mode='manual' intent='*PHASE*' antenna='ea12' scan='25~61'
 
 # ea16 has poor phase solutions
 # Check first that this wasn't a bad ant pos'n
+# Seems fine after re-running. Keep unflagged.
 # mode='manual' antenna='ea16'
+
+mode='manual' scan='2' timerange='<10:52:40'
+mode='manual' scan='52' timerange='<13:25:25'
+mode='manual' scan='4' timerange='<11:01:45'
+mode='manual' scan='30' timerange='<12:23:10'
+mode='manual' scan='35' timerange='<12:37:20'
+mode='manual' scan='52' timerange='<13:28:00'
+mode='manual' scan='13' timerange='<11:30:10'
+
+# Consistent RFI throughout. Unclear how to cleanly
+# separate.
+mode='manual' spw='1'

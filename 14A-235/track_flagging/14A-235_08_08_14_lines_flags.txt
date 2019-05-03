@@ -10,3 +10,43 @@ mode='manual' intent='*LEAK*' spw='0:2070~2180'
 mode='manual' scan='61' antenna='ea01&ea07;ea01&ea08;ea01&ea20;ea01&ea22;ea02&ea06;ea02&ea07;ea02&ea27;ea02&ea07;ea02&ea27;ea04&ea18;ea06&ea07;ea06&ea20;ea07&ea20;ea08&ea20;ea08&ea22;ea17&ea18;ea04&ea19;ea08&ea26;ea19&ea28;ea08&ea19;ea08&ea28;ea04&ea08;ea12&ea27;ea20&ea22;ea07&ea08'
 # May need to add ea01&ea19;ea11&ea19
 # Or just flag a couple ants...
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<12:52:40'
+mode='manual' scan='2'
+mode='manual' scan='34' timerange='<11:24:45'
+mode='manual' scan='43' timerange='<11:49:50'
+mode='manual' scan='61' timerange='<12:40:25'
+mode='manual' scan='62' timerange='<12:45:40'
+mode='manual' scan='4' timerange='<09:51:45'
+mode='manual' scan='11' timerange='<10:13:40'
+mode='manual' scan='18' timerange='<10:37:55'
+mode='manual' scan='20' timerange='<10:44:30'
+mode='manual' scan='30' timerange='<11:13:05'
+mode='manual' scan='35' timerange='<11:27:15'
+mode='manual' scan='44' timerange='<11:52:20'
+mode='manual' scan='44' timerange='11:53:20~11:53:30'
+mode='manual' scan='48' timerange='12:04:50~12:05:10'
+mode='manual' scan='13' timerange='<10:20:10'
+mode='manual' scan='13' timerange='10:24:00~10:24:20'
+mode='manual' scan='8' timerange='10:06:40~10:07:00'
+
+# Consistently high amp
+
+mode='manual' antenna='19'
+
+
+mode='manual' antenna='ea05&&ea23'
+mode='manual' antenna='ea08&&ea11'
+
+mode='manual' scan='29,45' antenna='ea14'
+mode='manual' scan='38' antenna='ea23'
+mode='manual' scan='48' antenna='ea20'
+mode='manual' scan='59,60' antenna='ea18&&ea28'
+mode='manual' scan='59,60' antenna='ea16&&ea28'
+mode='manual' scan='59,60' antenna='ea18&&ea24'
+mode='manual' scan='59,60' antenna='ea04&&ea25'
+mode='manual' scan='59,60' antenna='ea17&&ea28'

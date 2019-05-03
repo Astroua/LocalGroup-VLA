@@ -9,3 +9,10 @@ mode='manual' intent='*LEAK*' spw='0:2070~2180'
 # Poor phase sol'ns for ea12, ea25
 mode='manual' antenna='ea12,ea25'
 
+mode='manual' scan='2' timerange='<07:03:00'
+mode='manual' scan='26' timerange='<08:21:30'
+mode='manual' scan='35' timerange='<08:47:20'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now...
+mode='manual' spw='1'

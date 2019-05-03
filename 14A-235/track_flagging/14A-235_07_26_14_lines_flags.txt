@@ -14,3 +14,16 @@ mode='manual' antenna='ea25'
 
 # Poor baselines
 mode='manual' scan='2~10' intent='*PHASE*' antenna='ea08&ea22;ea01&ea20;ea07&ea20;ea06&ea07;ea01&ea22;ea20&ea22;ea08&ea28;ea04&ea18;ea04&ea08;ea02&ea06;ea17&ea18;ea17&ea21;ea02&ea27;ea08&ea19;ea22&ea26;ea19&ea26;ea04&ea19;ea05&ea23;ea01&ea08;ea19&ea28;ea04&ea28'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now...
+mode='manual' spw='1'
+
+mode='manual' scan='63' timerange='<09:59:20'
+mode='manual' scan='63' timerange='>10:04:10'
+mode='manual' scan='2' timerange='<06:54:50'
+mode='manual' scan='62' timerange='<09:52:00'
+mode='manual' scan='11' timerange='<07:21:00'
+mode='manual' scan='18' timerange='<07:45:20'
+mode='manual' scan='53' timerange='<09:25:00'
+

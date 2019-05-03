@@ -7,8 +7,34 @@ mode='manual' intent='*PHASE*' spw='0:2080~2350'
 mode='manual' intent='*LEAK*' spw='0:2070~2180'
 
 # Poor phases in ea12
-mode='manual' antenna='ea12' intent='*PHASE*' scan='17~43'
+mode='manual' antenna='ea12'
 
 # And in ea25
-mode='manual' antenna='ea25' scan='25,43,61'
+mode='manual' antenna='ea25'
 # May need to just flag this is so many gain scans are flagged
+
+mode='manual' antenna='ea06' scan='12,23,25,42'
+mode='manual' antenna='ea11' scan='61'
+
+# Large delays
+mode='manual' antenna='ea21,ea24'
+
+mode='manual' scan='63' timerange='<11:02:20'
+mode='manual' scan='2' timerange='<07:51:00'
+mode='manual' scan='25' timerange='<09:05:50'
+mode='manual' scan='52' timerange='<10:23:00'
+mode='manual' scan='11' timerange='<08:21:30'
+mode='manual' scan='14' timerange='<08:33:34'
+mode='manual' scan='15' timerange='08:38:20~08:38:25'
+mode='manual' scan='26' timerange='<09:08:50'
+mode='manual' scan='30' timerange='<09:20:45'
+mode='manual' scan='35' timerange='<09:34:35'
+mode='manual' scan='13' timerange='<08:28:00'
+
+# Various RFI in SPW 1 (OH 1612)
+# It's recoverable but I'm focussed on HI right now
+mode='manual' spw='1'
+
+# There is some RFI in SPW 2,3 in:
+# M33LARGE_8
+*
