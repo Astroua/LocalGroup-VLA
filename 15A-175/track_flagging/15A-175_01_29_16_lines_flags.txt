@@ -23,8 +23,27 @@ mode='manual' spw='0:3713~3715'
 # antenna 5 data lost (elevation motor 1 fault)
 # antenna 1 data lost (recent synthesizer softare upgrade did not work)
 
-# mode='manual' antenna='ea24' correlation='LL'
-# mode='manual' antenna='ea11&ea15;ea04&ea12'
+# Poor BP solutions
+mode='manual' antenna='ea24'
+# Large uvscatter
+mode='manual' antenna='ea11,ea10'
+mode='manual' antenna='ea04&&ea15'
+mode='manual' antenna='ea12&&ea15'
+mode='manual' antenna='ea12&&ea17'
+
+mode='manual' scan='8,18' antenna='ea02&&ea03'
+
 
 # calibrated phase vs time shows some bad data for early time ranges (>10 deg)
 # need to look for this.
+
+mode='manual' scan='2' timerange='<20:50:20'
+mode='manual' scan='70' timerange='<00:34:40'
+mode='manual' scan='4' timerange='<20:56:40'
+mode='manual' scan='61' timerange='<00:03:20'
+mode='manual' scan='14' timerange='<21:30:20'
+mode='manual' scan='30' timerange='<22:22:15'
+mode='manual' scan='54' timerange='<23:40:25'
+mode='manual' scan='57' timerange='<23:51:30'
+mode='manual' scan='8' timerange='>21:13:25'
+mode='manual' scan='62' timerange='<00:06:25'
