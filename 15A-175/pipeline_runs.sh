@@ -426,4 +426,35 @@ cd ..
 
 # Move speclines tracks to a single folder
 
-export calibrated_folder='/home/koch.473/kant/'
+# B tracks
+
+export calibrated_folder='/home/koch.473/kant/reduction/15A-175_calibrated/Btracks'
+
+mv 15A-175_02_08_15/15A-175_02_08_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_09_15/15A-175_02_09_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_16_15/15A-175_02_16_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_18_15/15A-175_02_18_15_speclines/*.speclines.ms ${calibrated_folder}/
+# mv 15A-175_02_21_15_early/15A-175_02_21_15_early_speclines/*.speclines.ms ${calibrated_folder}/
+# mv 15A-175_02_21_15_late/15A-175_02_21_15_late_speclines/*.speclines.ms ${calibrated_folder}/
+# mv 15A-175_02_23_15/15A-175_02_23_15_speclines/*.speclines.ms ${calibrated_folder}/
+# mv 15A-175_02_24_15/15A-175_02_24_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_03_07_15/15A-175_03_07_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_03_14_15/15A-175_03_14_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_05_01_15/15A-175_05_01_15_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_05_08_15/15A-175_05_08_15_speclines/*.speclines.ms ${calibrated_folder}/
+
+# C tracks
+
+export calibrated_folder='/home/koch.473/kant/reduction/15A-175_calibrated/Ctracks'
+
+# mv 15A-175_01_29_16/15A-175_01_29_16_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_01_30_16/15A-175_01_30_16_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_02_16/15A-175_02_02_16_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_05_16/15A-175_02_05_16_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_15_16_early/15A-175_02_15_16_early_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_15_16_late/15A-175_02_15_16_late_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_16_16_early/15A-175_02_16_16_early_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_16_16_late/15A-175_02_16_16_late_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_18_16/15A-175_02_18_16_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_19_16/15A-175_02_19_16_speclines/*.speclines.ms ${calibrated_folder}/
+mv 15A-175_02_20_16/15A-175_02_20_16_speclines/*.speclines.ms ${calibrated_folder}/
