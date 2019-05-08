@@ -33,7 +33,7 @@ num_chan = int((linespw_dict[spw_num][2] - 2 * pad_chan) / chan_width[spw_num])
 myvis = "14A-235_lines.ms"
 
 # Load in the SPW dict in the repo on cedar
-execfile(os.path.expanduser("~/code/LocalGroup_Lband/14A-235/spw_setup.py"))
+execfile(os.path.expanduser("~/code/LocalGroup-VLA/14A-235/spw_setup.py"))
 
 # Assume we can set reasonable image parameters from any of the tracks
 mycellsize = set_cellsize(myvis, spw_num, sample_factor=6.,
