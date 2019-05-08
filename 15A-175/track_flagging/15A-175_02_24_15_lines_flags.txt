@@ -12,8 +12,7 @@ mode='manual' spw='3880~4095'
 #mode='manual' intent='*PHASE*' spw='0:2080~2350'
 #mode='manual' intent='*LEAK*' spw='0:2070~2180'
 # From original flagging script but these are far offset
-# from ~0 km/s. Using ones below but noting that there is
-# significant scatter due to lack of good data on 3C48
+# from ~0 km/s.
 
 mode='manual' intent='*PHASE*' spw='0:1200~1400'
 mode='manual' intent='*BANDPASS*' spw='0:1200~1400'
@@ -34,7 +33,10 @@ mode='manual' spw='1'
 
 mode='manual' spw='0:3713~3715'
 
-mode='manual' scan='2' timerange='<23:25:45'
+# Significant amp scatter
+mode='manual' scan='2'
+
+#mode='manual' scan='2' timerange='<23:25:45'
 mode='manual' scan='54' timerange='<02:15:00'
 #mode='manual' scan='3' timerange='<23:38:20'
 mode='manual' scan='4' timerange='<23:38:20'
@@ -43,8 +45,11 @@ mode='manual' scan='45' timerange='<01:45:00'
 mode='manual' scan='30' timerange='<00:59:30'
 mode='manual' scan='38' timerange='<01:23:45'
 
-mode='manual' scan='2' antenna='ea05&&ea27'
+# Consistently high scatter in amplitude
 mode='manual' scan='21' antenna='ea07'
+mode='manual' scan='21' antenna='ea17'
+mode='manual' scan='37' antenna='ea10'
 
 mode='manual' antenna='ea22,ea27'
+
 
