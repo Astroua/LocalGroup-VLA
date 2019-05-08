@@ -3,8 +3,8 @@
 #SBATCH --mem=1547000M
 #SBATCH --ntasks-per-node=32
 #SBATCH --nodes=1
-#SBATCH --job-name=M31_11B_dirty_cube-%A-%a
-#SBATCH --output=casa-m31_11B_dirtycube-%A-%a.out
+#SBATCH --job-name=M31_14A_dirty_cube-%A-%a
+#SBATCH --output=casa-m31_14A_dirtycube-%A-%a.out
 #SBATCH --array=0,2-4%1
 
 export OMP_NUM_THREADS=$SLURM_JOB_CPUS_PER_NODE
