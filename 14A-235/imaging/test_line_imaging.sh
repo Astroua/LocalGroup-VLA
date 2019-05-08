@@ -25,10 +25,10 @@ cd $scratch_path
 Xvfb :1 &
 export DISPLAY=:1
 
+spw=$SLURM_ARRAY_TASK_ID
+
 echo "OMP_NUM_THREADS "$OMP_NUM_THREADS
 echo "Running SPW "$spw
-
-spw=0
 
 $HOME/casa-release-5.4.1-32.el7/bin/mpicasa -n 32 $HOME/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/14A-235/imaging/test_line_imaging.py $spw
 
