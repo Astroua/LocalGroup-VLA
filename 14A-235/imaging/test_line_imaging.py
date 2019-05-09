@@ -51,14 +51,20 @@ for source in fourteenA_sources:
                                 max_size=15000, pblevel=mypblimit)
     casalog.post("Image size: {}".format(myimagesize))
 
+    # Check to see if the images already exist. If so, continue
+    out_name = os.path.join(output_path,
+                            '{0}_14A-235_{1}_spw_{2}.dirty'
+                            .format(source, linespw_dict[spw_num][0], spw_num))
+
+    if os.path.exists("{}.residual".format(out_name)):
+        casalog.post("Already found image products for {}. Skipping.".format(source))
+
     # Image ALL channels in the MS. Just looking for reduction issues
     default('tclean')
 
     tclean(vis=myvis,
            datacolumn='corrected',
-           imagename=os.path.join(output_path,
-                                  '{0}_14A-235_{1}_spw_{2}.dirty'
-                                  .format(source, linespw_dict[spw_num][0], spw_num)),
+           imagename=out_name,
            spw=str(spw_num),
            field='{}*'.format(source),
            imsize=myimagesize,
