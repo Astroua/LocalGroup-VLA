@@ -10,7 +10,9 @@
 # OH - UPDATE channels
 # HI - 205 channels
 
-linespw_dict = {0: ["HI", "1.420405752GHz", 4096, "XXX1240~1560;2820~3410"],
+# HI velocity from 66 to 795 km/s
+
+linespw_dict = {0: ["HI", "1.420405752GHz", 4096, "235~2005"],
                 1: ["OH1612", "1.612231GHz", 512, "XXX53~88;223~240"],  # Currently all flagged
                 2: ["OH1665", "1.6654018GHz", 512, "XXX53~88;223~240"],
                 3: ["OH1667", "1.667359GHz", 512, "XXX53~88;223~240"],
