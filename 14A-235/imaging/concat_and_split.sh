@@ -13,7 +13,7 @@ module restore my_default
 source /home/ekoch/.bashrc
 source /home/ekoch/preload.bash
 
-export scratch_path=/home/ekoch/scratch/14A-235_imaging/
+export scratch_path=/home/ekoch/scratch/M31_imaging/14A-235/
 
 # Move to scratch space b/c casa write out the temporary files into the same folder
 cd $scratch_path
