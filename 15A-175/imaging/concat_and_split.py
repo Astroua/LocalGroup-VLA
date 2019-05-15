@@ -23,7 +23,7 @@ config_settings = {0: ["B", 9], 1: ["C", 11]}
 track_folder = "{0}tracks".format(config_settings[config_num][0])
 
 # Grab all of the MS tracks in the folder
-myvis = glob("*.speclines.ms")
+myvis = glob("{}/*.speclines.ms".format(track_folder))
 
 assert len(myvis) == config_settings[config_num][1]
 
