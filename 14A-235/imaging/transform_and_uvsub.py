@@ -6,16 +6,19 @@ to LSRK, and subtract continuum in uv-plane
 
 import os
 import sys
+import socket
 
-from tasks import mstransform, uvcontsub, partition, split
+from tasks import mstransform, uvcontsub
 
 myvis = '14A-235_lines.ms'
 
 spw_num = int(sys.argv[-1])
 
 # Load in the SPW dict in the repo on cedar
-execfile(os.path.expanduser("~/code/LocalGroup-VLA/14A-235/spw_setup.py"))
-# execfile(os.path.expanduser("~/ownCloud/code_development/LocalGroup-VLA/14A-235/spw_setup.py"))
+if socket.gethostname().lower() == 'segfault':
+    execfile(os.path.expanduser("~/ownCloud/code_development/LocalGroup-VLA/14A-235/spw_setup.py"))
+else:
+    execfile(os.path.expanduser("~/code/LocalGroup-VLA/14A-235/spw_setup.py"))
 
 for source in fourteenA_sources:
 
