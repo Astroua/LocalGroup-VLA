@@ -54,7 +54,7 @@ casalog.post("Image size: {}".format(myimagesize))
 
 # Check to see if the images already exist. If so, continue
 out_name = os.path.join(output_path,
-                        'M31_15A-175_Btracks_{1}_spw_{2}.dirty'
+                        'M31_15A-175_Btracks_{0}_spw_{1}.dirty'
                         .format(linespw_dict[spw_num][0], spw_num))
 
 # if os.path.exists("{}.residual".format(out_name)):
@@ -90,5 +90,6 @@ tclean(vis=myvis,
        veltype='radio',
        chanchunks=-1,
        restoration=False,
-       parallel=True,
+       # parallel=True,
+       parallel=False,
        )
