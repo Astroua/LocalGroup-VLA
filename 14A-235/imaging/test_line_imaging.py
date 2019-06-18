@@ -8,6 +8,7 @@ Should be run from the 14A-235_imaging folder on cedar
 import os
 import sys
 import numpy as np
+import socket
 
 # Requires analysisutils to be appended to the casa path
 # Load in the auto image parameter setters
@@ -26,7 +27,10 @@ if not os.path.exists(output_path):
 chan_width = {0: 10, 1: 5, 2: 5, 3: 5, 4: 5}
 
 # Load in the SPW dict in the repo on cedar
-execfile(os.path.expanduser("~/code/LocalGroup-VLA/14A-235/spw_setup.py"))
+if socket.gethostname().lower() == 'segfault':
+    execfile(os.path.expanduser("~/ownCloud/code_development/LocalGroup-VLA/14A-235/spw_setup.py"))
+else:
+    execfile(os.path.expanduser("~/code/LocalGroup-VLA/14A-235/spw_setup.py"))
 
 # Don't image the channel edges
 pad_chan = int(np.ceil(linespw_dict[spw_num][2] * 0.05))
