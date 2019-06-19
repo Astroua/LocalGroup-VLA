@@ -5,47 +5,33 @@ Match and split the 14A M31 HI data.
 
 import numpy as np
 import sys
-from glob import glob
 import os
 
-from tasks import mstransform, partition, split, concat
+from tasks import mstransform
 
 # Use astropy's spectral conversion
 # Needs to be installed separately
 from astropy import units as u
 
-use_contsub = True if sys.argv[-2] == "True" else False
+use_contsub = True if sys.argv[-4] == "True" else False
 
 # All in km/s
-chan_width = float(sys.argv[-1])
+chan_width = float(sys.argv[-3])
 start_vel = -635
 end_vel = -6
+
+part = int(sys.argv[-2])
+total_parts = int(sys.argv[-1])
 
 chan_width_label = "{}kms".format(chan_width).replace(".", "_")
 chan_width_quant = chan_width * u.km / u.s
 
-# XXX ~1334 for 0.21 km/s
+# ~1526 for 0.42 km/s
 
 if use_contsub:
     fourteenA_ms = "M31_14A-235_HI_spw_0_LSRK.ms.contsub"
 else:
     fourteenA_ms = "M31_14A-235_HI_spw_0_LSRK.ms"
-
-# Create an MMS prior to splitting to that the split can be run in parallel
-
-fourteenA_mms = "{0}.{1}.regrid".format(fourteenA_ms, chan_width_label)
-
-if os.path.exists(fourteenA_mms):
-    casalog.post("Found the regridded 14A MS. Skipping mstransform.")
-else:
-
-    casalog.post("Regridding 14A")
-
-    partition(vis=fourteenA_ms,
-              outputvis=fourteenA_mms,
-              createmms=True,
-              flagbackup=False,
-              numsubms=31)
 
 
 def vel_to_freq(vel_or_freq, rest_freq=1.42040575177 * u.GHz,
@@ -100,38 +86,12 @@ if nchan_14A % navg_channel != 0:
 chan_path = "HI_{0}_{1}".format("contsub" if use_contsub else "nocontsub",
                                 chan_width_label)
 
-if not os.path.exists(chan_path):
+nchan_part = int(np.ceil(nchan / total_parts))
 
-    os.mkdir(chan_path)
+start = part * nchan_part
+end = min(part * nchan_part, nchan)
 
-    start = 0
-
-else:
-
-    # Check if some of the channels have already been split
-    exist_chans = glob("{}/channel_*".format(chan_path))
-
-    # Didn't find any existing channels
-    if len(exist_chans) == 0:
-        start = 0
-
-    else:
-        # Pick out the channel numbers
-        nums = np.array([int(chan.split("_")[-1]) for chan in exist_chans])
-
-        # Assume that the last job stopped while part of the way through
-        # the final channel
-        final_chan = exist_chans[nums.argmax()]
-
-        os.system("rm -r {}".format(final_chan))
-
-        start = nums.max() - 1
-
-if start == nchan:
-    casalog.post("No more channels to split!")
-    raise ValueError("No more channels to split!")
-
-for chan in range(start, nchan + 1):
+for chan in range(start, end):
 
     casalog.post("On splitting channel {}".format(chan))
 
@@ -141,32 +101,22 @@ for chan in range(start, nchan + 1):
         os.mkdir(ind_chan_path)
 
     fourA_split_msname = "{0}_channel_{1}.ms".format(fourteenA_ms, chan)
-    fourA_split_mmsname = "{0}_channel_{1}.mms".format(fourteenA_ms, chan)
 
-    start_14B = chan * navg_channel + start_14B_chan
-    end_14B = (chan + 1) * navg_channel + start_14B_chan - 1
+    start_14A = chan * navg_channel + start_14A_chan
+    end_14A = (chan + 1) * navg_channel + start_14A_chan - 1
 
     if navg_channel == 1:
         # These should equal when not averaging channels
-        assert start_14B == end_14B
-        spw_selec = "0:{0}".format(start_14B)
+        assert start_14A == end_14A
+        spw_selec = "0:{0}".format(start_14A)
     else:
-        spw_selec = '0:{0}~{1}'.format(start_14B, end_14B)
+        spw_selec = '0:{0}~{1}'.format(start_14A, end_14A)
 
-    mstransform(vis=fourteenA_mms,
-                outputvis=os.path.join(ind_chan_path, fourA_split_mmsname),
+    mstransform(vis=fourteenA_ms,
+                outputvis=os.path.join(ind_chan_path, fourA_split_msname),
                 datacolumn='data',
                 mode='channel',
                 field='M31*',
                 spw=spw_selec,
                 chanaverage=True if navg_channel > 1 else False,
                 chanbin=navg_channel)
-
-    # Convert the final MMS to an MS b/c an MMS uses a lot of files and
-    # clusters don't like that.
-    split(vis=os.path.join(ind_chan_path, fourA_split_mmsname),
-          outputvis=os.path.join(ind_chan_path, fourA_split_msname),
-          keepmms=False, datacolumn='DATA')
-
-    # Clean-up temporary MS
-    os.system("rm -rf {}".format(os.path.join(ind_chan_path, fourA_split_mmsname)))
