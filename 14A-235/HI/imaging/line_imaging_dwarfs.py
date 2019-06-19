@@ -74,6 +74,12 @@ casalog.post("Cell size: {}".format(mycellsize))
 mypblimit = 0.05
 # mypblimit = 0.15
 
+# Scale from the threshold value for one channel in these data
+threshold_val_stage1 = 20.  # mJy/bm
+use_thresh = "{}mJy/beam".format(threshold_val_stage1 / np.sqrt(chan_width))
+threshold_val_stage2 = 5.  # mJy/bm
+use_thresh = "{}mJy/beam".format(threshold_val_stage2 / np.sqrt(chan_width))
+
 # Set to something fairly large.
 # myimagesize = set_imagesize(myvis, spw_num, gal_name, sample_factor=6.,
 #                             max_size=15000, pblevel=mypblimit)
@@ -146,7 +152,7 @@ tclean(vis=myvis,
        cell=mycellsize,
        specmode='cube',
        start=fourteenA_HI_channels[gal_name]['start'],
-       width=1,
+       width=chan_width,
        nchan=nchans,
        startmodel=None,
        gridder='mosaic',
@@ -205,7 +211,7 @@ tclean(vis=myvis,
        cell=mycellsize,
        specmode='cube',
        start=fourteenA_HI_channels[gal_name]['start'],
-       width=1,
+       width=chan_width,
        nchan=nchans,
        startmodel=None,
        gridder='mosaic',
