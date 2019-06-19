@@ -20,7 +20,7 @@ from constants import hi_freq
 
 osjoin = os.path.join
 
-def vel_to_freq(vel_or_freq, rest_freq=1.42040575177 * u.GHz,
+def vel_to_freq(vel_or_freq, rest_freq=hi_freq,
                 unit=u.Hz):
     '''
     Using radio velocity here.
@@ -46,8 +46,8 @@ if run_04kms:
     out_name = "CAR_C01_14A235_match_04kms.fits"
     out_name_specregrid = "CAR_C01_14A235_match_04kms_spectralregrid.fits"
 
-    # We require the spatial pb mask and a saved FITS header that defines the spatial
-    # WCS information of the VLA cube
+    # We require the spatial pb mask and a saved FITS header that defines the
+    # spatial WCS information of the VLA cube
     vla_pbmask = fits.getdata(fourteenA_HI_data_path("14A_spatial_pbmask.fits")) > 0
 
     vla_spat_hdr = fits.Header.fromtextfile(fourteenA_HI_data_path("14A_spatial_header.txt"))
