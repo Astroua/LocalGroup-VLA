@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=10:00:00
+#SBATCH --time=12:00:00
 #SBATCH --mem=4000M
 #SBATCH --ntasks=1
 #SBATCH --job-name=M31_14A-HI_match_and_combine-%A-%a
