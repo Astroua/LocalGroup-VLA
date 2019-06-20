@@ -47,6 +47,19 @@ def vel_to_freq(vel_or_freq, rest_freq=1.42040575177 * u.GHz,
 def closest_channel(freqs, targ_freq):
     return np.argmin(np.abs(freqs - targ_freq))
 
+fourteenA_mms = "{0}.{1}.regrid".format(fourteenA_ms, chan_width_label)
+
+if os.path.exists(fourteenA_mms):
+    casalog.post("Found the 14A MMS. Skipping mstransform.")
+else:
+    casalog.post("Regridding 14A")
+
+    partition(vis=fourteenA_ms,
+              outputvis=fourteenA_mms,
+              createmms=True,
+              flagbackup=False,
+              numsubms=31)
+
 
 # Get the HI SPW freqs
 tb.open(os.path.join(fourteenA_ms, 'SPECTRAL_WINDOW'))
@@ -101,6 +114,7 @@ for chan in range(start, end):
         os.mkdir(ind_chan_path)
 
     fourA_split_msname = "{0}_channel_{1}.ms".format(fourteenA_ms, chan)
+    fourA_split_mmsname = "{0}_channel_{1}.mms".format(fourteenA_ms, chan)
 
     start_14A = chan * navg_channel + start_14A_chan
     end_14A = (chan + 1) * navg_channel + start_14A_chan - 1
@@ -112,11 +126,17 @@ for chan in range(start, end):
     else:
         spw_selec = '0:{0}~{1}'.format(start_14A, end_14A)
 
-    mstransform(vis=fourteenA_ms,
-                outputvis=os.path.join(ind_chan_path, fourA_split_msname),
+    mstransform(vis=fourteenA_mms,
+                outputvis=os.path.join(ind_chan_path, fourA_split_mmsname),
                 datacolumn='data',
                 mode='channel',
                 field='M31*',
                 spw=spw_selec,
                 chanaverage=True if navg_channel > 1 else False,
                 chanbin=navg_channel)
+
+    split(vis=os.path.join(ind_chan_path, fourA_split_mmsname),
+          outputvis=os.path.join(ind_chan_path, fourA_split_msname),
+          keepmms=False, datacolumn='DATA')
+
+    os.system("rm -rf {}".format(os.path.join(ind_chan_path, fourA_split_mmsname)))

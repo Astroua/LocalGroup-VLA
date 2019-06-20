@@ -1,7 +1,8 @@
 #!/bin/bash
-#SBATCH --time=12:00:00
-#SBATCH --mem=4000M
-#SBATCH --ntasks=1
+#SBATCH --time=16:00:00
+#SBATCH --mem=128000M
+#SBATCH --ntasks-per-node=32
+#SBATCH --nodes=1
 #SBATCH --job-name=M31_14A-HI_match_and_combine-%A-%a
 #SBATCH --output=casa-m31-14A_HI_match_and_combine-%A-%a.out
 #SBATCH --array=0-17%1
