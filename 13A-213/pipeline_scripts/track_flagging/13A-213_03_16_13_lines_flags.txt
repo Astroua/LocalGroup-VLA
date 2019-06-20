@@ -23,23 +23,28 @@ mode='manual' scan='3'
 
 # scan 17 on gain cal also has problems (probably driving
 # the above issues)
-# mode='manual' scan='17'
+mode='manual' scan='17'
+# Large amp drift in scan 20
+mode='manual' scan='20'
 
 # And the increased scatter and weird behaviour in 17 starts
 # after ~21:03:10 in scan 14
-# mode='manual' scan='14' timerange='>21:03:10'
-# Ends in scan 20
-# mode='manual' scan='20' timerange='<21:49:50'
+mode='manual' scan='14' timerange='>21:03:10'
+
+# higher amps at beginning of scan 23
+mode='manual' scan='23' timerange='<22:11:40'
+
+mode='manual' scan='26' timerange='<22:34:30'
+mode='manual' scan='29' timerange='>22:58:20'
 
 # The above looks pathological. Remove these scans
 mode='manual' scan='15~19'
-# mode='manual' scan='13' spw='2'
 
-# High amps in scan 6 on source.
+# Large RFI spike across multiple SPW
+mode='manual' scan='6'
+
 # Also in scan 24
-# Check again after cal flagging
-# mode='manual' scan='6' spw='0' timerange='<20:01:30'
-# mode='manual' scan='24' spw='0' timerange='<22:16:30'
+mode='manual' scan='24' spw='0' timerange='<22:16:30'
 
 # Amplitude spike near scan start
 mode='manual' scan='33' timerange='<23:24:40'
@@ -49,8 +54,8 @@ mode='manual' scan='4' timerange='<19:49:00'
 # Consistent amp spike in SPW 1
 mode='manual' spw='1:0~20' scan='21~31'
 
-# SPW 2 dip in gain cal amp
-mode='manual' spw='2' scan='11' timerange='>20:40:50'
+# dip in gain cal amp
+mode='manual' scan='11' timerange='>20:40:50'
 
 # RFI spikes in SPW 3,4
 mode='manual' spw='3' scan='21' timerange='>21:58:30'
@@ -59,3 +64,40 @@ mode='manual' spw='3' scan='24' timerange='<22:19:30'
 mode='manual' spw='4,5' scan='10' timerange='>20:35:30'
 
 # Horrid amp time variations in parts of SPW 5, 6, 8. May need to flag all
+
+
+# Flag HI absorption on the phase cal
+mode='manual' spw='0:450~600' field='2'
+
+# There seems to RFI in the gain cal scans. Most of it
+# is between channels 1000 to 1200
+mode='manual' spw='0:960~1200' field='2'
+# Also 300 to 500
+mode='manual' spw='0:300~500' field='2'
+
+mode='manual' spw='0' scan='5' antenna='ea24&&ea26'
+mode='manual' spw='0' scan='11' antenna='ea04&&ea21'
+mode='manual' spw='0' scan='29' antenna='ea06&&ea28'
+mode='manual' spw='0' scan='29' antenna='ea03&&ea22'
+mode='manual' spw='0' scan='32' antenna='ea22&&ea28'
+mode='manual' spw='0' scan='32' antenna='ea03&&ea06'
+mode='manual' spw='0' scan='32' antenna='ea01&&ea28'
+
+# High amp in most gain cal scans
+mode='manual' antenna='ea09'
+
+mode='manual' spw='3' scan='8' antenna='ea03&&ea22'
+mode='manual' spw='3' scan='14' antenna='ea10&&ea17'
+mode='manual' spw='3' scan='14' antenna='ea06&&ea22'
+mode='manual' spw='3' scan='14' antenna='ea03&&ea07'
+mode='manual' spw='3' scan='23' antenna='ea03&&ea09'
+
+mode='manual' spw='2' scan='4,5' antenna='ea24&&ea26'
+mode='manual' spw='2' scan='4' antenna='ea06&&ea28'
+mode='manual' spw='2' scan='4' antenna='ea10&&ea17'
+
+# Flag absorption on 3C138
+mode='manual' scan='33' spw='0:320~600'
+
+
+

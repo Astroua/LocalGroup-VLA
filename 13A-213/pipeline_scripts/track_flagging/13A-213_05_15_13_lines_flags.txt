@@ -3,6 +3,11 @@
 # 3C286 does not have strong HI absorption (see 21-SPONGE; Murray+18)
 # No need to flag the bandpass calibrator
 
+# But the gain cal does and NGC 6822 overlaps with MW emission near 0 km/s
+mode='manual' intent='*BANDPASS*' spw='0:800~1000'
+mode='manual' intent='*PHASE*' spw='0:800~1000'
+mode='manual' intent='*LEAK*' spw='0:800~1000'
+
 # Pipeline flags ea01,ea25. Ensure these are always flagged
 mode='manual' antenna='ea01,ea25'
 
