@@ -13,6 +13,9 @@ from tasks import mstransform
 # Needs to be installed separately
 from astropy import units as u
 
+
+use_parallel = True
+
 use_contsub = True if sys.argv[-4] == "True" else False
 
 # All in km/s
@@ -47,18 +50,23 @@ def vel_to_freq(vel_or_freq, rest_freq=1.42040575177 * u.GHz,
 def closest_channel(freqs, targ_freq):
     return np.argmin(np.abs(freqs - targ_freq))
 
-fourteenA_mms = "{0}.{1}.regrid".format(fourteenA_ms, chan_width_label)
 
-if os.path.exists(fourteenA_mms):
-    casalog.post("Found the 14A MMS. Skipping mstransform.")
+if use_parallel:
+    fourteenA_mms = "{0}.{1}.regrid".format(fourteenA_ms, chan_width_label)
+
+    if os.path.exists(fourteenA_mms):
+        casalog.post("Found the 14A MMS. Skipping mstransform.")
+    else:
+        casalog.post("Regridding 14A")
+
+        partition(vis=fourteenA_ms,
+                  outputvis=fourteenA_mms,
+                  createmms=True,
+                  flagbackup=False,
+                  numsubms=31)
+
 else:
-    casalog.post("Regridding 14A")
-
-    partition(vis=fourteenA_ms,
-              outputvis=fourteenA_mms,
-              createmms=True,
-              flagbackup=False,
-              numsubms=31)
+    fourteenA_mms = fourteenA_ms
 
 
 # Get the HI SPW freqs
@@ -105,6 +113,7 @@ start = part * nchan_part
 end = min(part * nchan_part, nchan)
 
 for chan in range(start, end):
+# for chan in range(215, 230):
 
     casalog.post("On splitting channel {}".format(chan))
 
@@ -114,7 +123,10 @@ for chan in range(start, end):
         os.mkdir(ind_chan_path)
 
     fourA_split_msname = "{0}_channel_{1}.ms".format(fourteenA_ms, chan)
-    fourA_split_mmsname = "{0}_channel_{1}.mms".format(fourteenA_ms, chan)
+    if use_parallel:
+        fourA_split_mmsname = "{0}_channel_{1}.mms".format(fourteenA_ms, chan)
+    else:
+        fourA_split_mmsname = "{0}_channel_{1}.ms".format(fourteenA_ms, chan)
 
     start_14A = chan * navg_channel + start_14A_chan
     end_14A = (chan + 1) * navg_channel + start_14A_chan - 1
@@ -135,8 +147,9 @@ for chan in range(start, end):
                 chanaverage=True if navg_channel > 1 else False,
                 chanbin=navg_channel)
 
-    split(vis=os.path.join(ind_chan_path, fourA_split_mmsname),
-          outputvis=os.path.join(ind_chan_path, fourA_split_msname),
-          keepmms=False, datacolumn='DATA')
+    if use_parallel:
+        split(vis=os.path.join(ind_chan_path, fourA_split_mmsname),
+              outputvis=os.path.join(ind_chan_path, fourA_split_msname),
+              keepmms=False, datacolumn='DATA')
 
-    os.system("rm -rf {}".format(os.path.join(ind_chan_path, fourA_split_mmsname)))
+        os.system("rm -rf {}".format(os.path.join(ind_chan_path, fourA_split_mmsname)))
