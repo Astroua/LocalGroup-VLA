@@ -112,7 +112,7 @@ chan_path = "HI_{0}_{1}".format("contsub" if use_contsub else "nocontsub",
 nchan_part = int(np.ceil(nchan / total_parts))
 
 start = part * nchan_part
-end = min(part * nchan_part, nchan)
+end = min((part + 1) * nchan_part, nchan)
 
 for chan in range(start, end):
 # for chan in range(215, 230):
