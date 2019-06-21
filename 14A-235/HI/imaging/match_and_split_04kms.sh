@@ -41,16 +41,18 @@ rc_path="${tmp_dir}/.casa"
 Xvfb :1 &
 export DISPLAY=:1
 
+export out_chan_folder="HI_contsub_0_42kms"
+
 echo "Copy whole MS to node"
 cp -r $scratch_path/M31_14A-235_HI_spw_0_LSRK.ms.contsub .
-mkdir HI_contsub_0_42kms
-
 # Enable to do non contsub version
 # cp -r $scratch_path/M31_14A-235_HI_spw_0_LSRK.ms .
 
-casa-release-5.4.1-32.el7/bin/mpicasa -n 32 casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/14A-235/HI/imaging/match_and_split.py True 0.42 $job_num 18
+mkdir ${out_chan_folder}
 
-echo "Copy back to scratch"
-cp -r HI_contsub_0_42kms/* ${scratch_path}/HI_contsub_0_42kms/
+casa-release-5.4.1-32.el7/bin/mpicasa -n 32 casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/14A-235/HI/imaging/match_and_split.py True 0.42 $job_num 18 ${scratch_path}/${out_chan_folder}/
+
+# echo "Copy back to scratch"
+# cp -r ${out_chan_folder}/* ${scratch_path}/${out_chan_folder}/
 
 echo "DONE ${job_num}!"
