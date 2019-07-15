@@ -115,7 +115,6 @@ start = part * nchan_part
 end = min((part + 1) * nchan_part, nchan)
 
 for chan in range(start, end):
-# for chan in range(215, 230):
 
     casalog.post("On splitting channel {}".format(chan))
 
