@@ -16,7 +16,7 @@ source /home/ekoch/preload.bash
 
 export scratch_path=/home/ekoch/scratch/M31_imaging/14A-235/
 
-num_chans=1525
+num_chans=1526
 
 # Move to scratch space b/c casa write out the temporary files into the same folder
 # cd $scratch_path
@@ -54,9 +54,9 @@ for i in {0..1525}; do
 done
 
 echo "Concatenating channels"
-casa-release-5.4.1-32.el7/bin/casa --rcdir ${rc_path} --nologger --nogui --log2term --nocrashreport -c $HOME/code/VLA_Lband/17B-162/HI/imaging/concat_channels.py "HI_contsub_0_42kms_${suffix_arr[$job_num]}" "M31_14A-235_HI_contsub_width_0_42kms" $num_chans ${suffix_arr[$job_num]}
+casa-release-5.4.1-32.el7/bin/casa --rcdir ${rc_path} --nologger --nogui --log2term --nocrashreport -c $HOME/code/VLA_Lband/17B-162/HI/imaging/concat_channels.py "HI_contsub_0_42kms_${suffix_arr[$job_num]}" "M31_14A_HI_contsub_width_04kms" $num_chans ${suffix_arr[$job_num]}
 
 echo "Copying M31_14A-235_HI_contsub_width_0_42kms.${suffix_arr[$job_num]} to scratch"
-cp -r "HI_contsub_1_0kms/M31_14A-235_HI_contsub_width_0_42kms.${suffix_arr[$job_num]}" $scratch_path/HI_contsub_1_0kms
+cp -r HI_contsub_0_42kms_${suffix_arr[$job_num]} $scratch_path/
 
 echo "Done!"
