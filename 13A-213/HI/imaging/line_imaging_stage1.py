@@ -55,7 +55,7 @@ mypblimit = 0.05
 # Set to something fairly large.
 # My routine is underestimating the pb limit size a bit
 # for some of these cases
-myimagesize = 1024
+myimagesize = 1800
 # myimagesize = set_imagesize(myvis, spw_num, source, sample_factor=6.,
 #                             max_size=15000, pblevel=mypblimit)
 casalog.post("Image size: {}".format(myimagesize))
