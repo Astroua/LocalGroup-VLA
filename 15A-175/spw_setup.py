@@ -22,4 +22,4 @@ linespw_dict = {0: ["HI", "1.420405752GHz", 4096, "205~1075;2805~3750"],
 # XXX UPDATE M31 from -16 to -643 km/s. Native channel width of 0.4122 km/s
 
 # NEEDS TO BE UPDATED
-fifteenA_HI_channels = {"start": 2205, 'end': 3725}
+# fifteenA_HI_channels = {"start": 2205, 'end': 3725}
