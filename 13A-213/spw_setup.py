@@ -62,9 +62,9 @@ linespw_dict['SextansA'] = {0: ["HI", "1.420405752GHz", 2048],
 # HI_start and HI_nchan is the start and number of channels to use in the
 # final imaging.
 galaxy_dict = dict(ic1613={"phasecenter": "J2000 01h04m47.790 +02d07m04.0",
-                           "cont_range": "0:450~700;1150~1500",
-                           "HI_start": 750,
-                           "HI_nchan": 600},
+                           "cont_range": "0:750~950;1300~1700",
+                           "HI_start": 950,  # Emission at ~1050; ends at ~1220
+                           "HI_nchan": 350},
                    wlm={"phasecenter": "J2000 00h01m58.160 -15d27m39.30",
                         "cont_range": "0:200~600;1250~1700",
                         "HI_start": 700,
