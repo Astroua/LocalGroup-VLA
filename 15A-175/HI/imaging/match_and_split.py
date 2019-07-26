@@ -197,6 +197,9 @@ if nchan_14A % navg_channel != 0:
 chan_path = "HI_{0}_{1}".format("contsub" if use_contsub else "nocontsub",
                                 chan_width_label)
 
+if not os.path.exists(chan_path):
+    os.mkdir(chan_path)
+
 nchan_part = int(np.ceil(nchan / total_parts))
 
 start = part * nchan_part
@@ -205,7 +208,7 @@ end = min((part + 1) * nchan_part, nchan)
 start_chans = [start_14A_chan, start_15A_B_chan, start_15A_C_chan]
 
 # for chan in range(start, end):
-for chan in [0, 50, 100, 150, 200, 240]:
+for chan in [0, 150, 300, 450, 600, 700]:
 
     casalog.post("On splitting channel {}".format(chan))
 
