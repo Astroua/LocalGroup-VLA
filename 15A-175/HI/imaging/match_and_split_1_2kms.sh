@@ -23,7 +23,7 @@ job_num=$SLURM_ARRAY_TASK_ID
 
 # CASA runs better if each job has it's own source files
 # So we'll run from the node storage
-tmp_dir=$SLURM_TMPDIR/concat_M33_chans_1kms_${suffix_arr[$job_num]}
+tmp_dir=$SLURM_TMPDIR/concat_M31_chans_1_2kms_${suffix_arr[$job_num]}
 mkdir $tmp_dir
 
 cd $tmp_dir
