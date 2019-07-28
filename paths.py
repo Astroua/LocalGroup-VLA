@@ -43,6 +43,20 @@ fourteenA_HI_data_wEBHIS_path = \
     partial(name_return_check,
             path=os.path.join(m31_data_path, "VLA/14A-235/HI/full_imaging_wEBHIS/"))
 
+fifteenA_HI_BC_1_2kms_data_path = \
+    partial(name_return_check,
+            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_1_2kms_noSD/"))
+fifteenA_HI_BC_1_2kms_data_wEBHIS_path = \
+    partial(name_return_check,
+            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_1_2kms_wEBHIS/"))
+
+fifteenA_HI_BCtaper_04kms_data_path = \
+    partial(name_return_check,
+            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_04kms_noSD/"))
+fifteenA_HI_BCtaper_04kms_data_wEBHIS_path = \
+    partial(name_return_check,
+            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_04kms_wEBHIS/"))
+
 
 ebhis_m31_HI_data_path = \
     partial(name_return_check,
