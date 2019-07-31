@@ -253,8 +253,8 @@ try:
 
         # Add an additional stopping criteria when the model flux between
         # major cycles changes by less than a set threshold.
-        # Setting threshold to be 0.1%
-        delta_model_flux_thresh = 1e-3
+        # Setting threshold to be 0.01%
+        delta_model_flux_thresh = 1e-4
 
         model_flux_criterion = False
 
