@@ -66,9 +66,9 @@ galaxy_dict = dict(ic1613={"phasecenter": "J2000 01h04m47.790 +02d07m04.0",
                            "HI_start": 950,  # Emission at ~1050; ends at ~1220
                            "HI_nchan": 350},
                    wlm={"phasecenter": "J2000 00h01m58.160 -15d27m39.30",
-                        "cont_range": "0:200~600;1250~1700",
-                        "HI_start": 700,
-                        "HI_nchan": 800},
+                        "cont_range": "0:200~800;1350~1700",
+                        "HI_start": 925,  # Emission at ~1024; ends at ~1257
+                        "HI_nchan": 425},
                    ngc6822={"phasecenter": "J2000 19h44m57.700 -14d48m12.00",
                             "cont_range": "0:500~650;1150~1550",
                             "HI_start": 720,
