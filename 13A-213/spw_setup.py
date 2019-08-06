@@ -74,6 +74,6 @@ galaxy_dict = dict(ic1613={"phasecenter": "J2000 01h04m47.790 +02d07m04.0",
                             "HI_start": 720,
                             "HI_nchan": 700},
                    sextansa={"phasecenter": "J2000 10h11m00.790 -04d41m34.00",
-                             "cont_range": "0:150~700;1070~1500",
-                             "HI_start": 600,
-                             "HI_nchan": 700},)
+                             "cont_range": "0:150~650;1170~1500",
+                             "HI_start": 765,  # Emission at 865; ends at 1075
+                             "HI_nchan": 400},)
