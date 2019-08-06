@@ -118,9 +118,9 @@ os.system("rm -r {}".format(os.path.join(output_path, mask_name)))
 workdir = "{0}.{1}".format(imgname, 'workdirectory')
 
 # Remove workdir images
-os.system("rm -rf {0}/*.image".format(workdir))
+os.system("rm -rf {0}/*.image".format(os.path.join(output_path, workdir)))
 # Remove workdir masks
-os.system("rm -rf {0}/*.mask".format(workdir))
+os.system("rm -rf {0}/*.mask".format(os.path.join(output_path, workdir)))
 
 
 # Low level emission not included in the mask.
