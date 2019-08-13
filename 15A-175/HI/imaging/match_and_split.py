@@ -207,8 +207,7 @@ end = min((part + 1) * nchan_part, nchan)
 
 start_chans = [start_14A_chan, start_15A_B_chan, start_15A_C_chan]
 
-# for chan in range(start, end):
-for chan in [0, 150, 300, 450, 600, 700]:
+for chan in range(start, end):
 
     casalog.post("On splitting channel {}".format(chan))
 
