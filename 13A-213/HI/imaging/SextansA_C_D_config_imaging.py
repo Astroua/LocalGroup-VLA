@@ -175,7 +175,8 @@ elif stage == 2:
 
     impbcor(imagename='{}.image'.format(os.path.join(output_path, imgname)),
             pbimage='{}.pb'.format(os.path.join(output_path, imgname)),
-            outfile='{}.image.pbcor'.format(os.path.join(output_path, imgname)))
+            outfile='{}.image.pbcor'.format(os.path.join(output_path, imgname)),
+            overwrite=True)
 
     # Into FITS
 
