@@ -168,9 +168,11 @@ elif stage == 2:
         os.system("cp -r {0} {1}".format(os.path.join(output_path, inp_name),
                                          os.path.join(output_path, out_name)))
 
-    # Remove the mask
+    # Remove the mask and image
     mask_name = "{0}.{1}".format(imgname, 'mask')
     os.system("rm -r {}".format(os.path.join(output_path, mask_name)))
+    img_name = "{0}.{1}".format(imgname, 'image')
+    os.system("rm -r {}".format(os.path.join(output_path, img_name)))
 
     # We also have to delete these products from the workdir
     workdir = "{0}.{1}".format(imgname, 'workdirectory')
