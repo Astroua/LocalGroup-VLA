@@ -143,8 +143,8 @@ old_imagename_move = "{0}.image.stage1".format(imagename)
 os.system("cp -r {0} {1}".format(old_imagename, old_imagename_move))
 
 # And residual
-old_residualname = "{0}.image".format(imagename)
-old_residualname_move = "{0}.image.stage1".format(imagename)
+old_residualname = "{0}.residual".format(imagename)
+old_residualname_move = "{0}.residual.stage1".format(imagename)
 os.system("cp -r {0} {1}".format(old_residualname, old_residualname_move))
 
 # from imagerhelpers.imager_base import PySynthesisImager
