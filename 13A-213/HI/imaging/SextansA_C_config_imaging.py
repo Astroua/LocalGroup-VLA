@@ -48,6 +48,9 @@ if use_contsub:
     else:
         output_path = "{0}_HI_imaging_chanwidth_{1}chan_uniform".format(gal_name, chan_width)
         imgname = '{0}_13A-213_{1}_spw_{2}_uniform.clean'.format(gal_name, "HI", spw_num)
+
+    my_minbeamfrac = 0.8
+
 else:
     myvis = 'SextansA_13A-213_HI_spw_0_LSRK.ms'
     if use_weighting == 'natural':
@@ -66,6 +69,7 @@ else:
         imgname = '{0}_13A-213_{1}_spw_{2}_wcont_uniform.clean'\
             .format(gal_name, "HI", spw_num)
 
+    my_minbeamfrac = 0.2
 
 if not os.path.exists(output_path):
     os.mkdir(output_path)
@@ -97,6 +101,7 @@ else:
     raise ValueError
 
 # Set to something fairly large.
+# We also need to be more accepting for the clean mask using briggs weighting
 if use_weighting == 'natural':
     myimagesize = 1200
 else:
@@ -153,7 +158,7 @@ if stage == 1:
            lownoisethreshold=2.0,
            negativethreshold=0.0,
            smoothfactor=3.0,
-           minbeamfrac=0.8,
+           minbeamfrac=my_minbeamfrac,
            cutthreshold=0.01,
            growiterations=75,
            fastnoise=False,
