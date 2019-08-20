@@ -35,4 +35,4 @@ fourteenA_sources = {"M31": 'J2000 00h42m44.350 +41d16m08.63',
 
 fourteenA_HI_channels = {"M31": {"start": 2205, 'end': 3725},
                          "NGC205": {"start": 2555, 'end': 3065},
-                         "NGC185": {"start": 2545, 'end': 2745}}
+                         "NGC185": {"start": 2445, 'end': 2845}}
