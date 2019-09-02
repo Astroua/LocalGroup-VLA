@@ -15,5 +15,5 @@ pbname = sys.argv[-1]
 
 impbcor(imagename=imgname,
         pbimage=pbname,
-        outfile="{}.fits".format(imgname),
+        outfile="{}.pbcor".format(imgname),
         overwrite=True)
