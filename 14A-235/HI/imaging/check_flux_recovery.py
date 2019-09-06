@@ -154,6 +154,7 @@ ebhis_spec = OneDSpectrum(total_ebhis_profile,
                           meta=spec.meta,
                           beam=ebhis_cube.beam)
 ebhis_spec.write(ebhis_m31_HI_data_path(
-                 "14A-235_items/CAR_C01_14A235_match_04kms_spectralregrid.total_flux_spec.fits", no_check=True))
+                 "14A-235_items/CAR_C01_14A235_match_04kms_spectralregrid.total_flux_spec.fits", no_check=True),
+                overwrite=True)
 
 default_figure()
