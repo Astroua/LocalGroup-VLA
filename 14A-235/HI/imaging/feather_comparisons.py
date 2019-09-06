@@ -17,7 +17,6 @@ from uvcombine.scale_factor import find_scale_factor
 from cube_analysis.feather_cubes import feather_compare_cube
 
 from paths import (fourteenA_HI_data_path,
-                   fourteenA_HI_data_wEBHIS_path,
                    ebhis_m31_HI_data_path,
                    m31_data_path,
                    allfigs_path)
@@ -82,11 +81,11 @@ plt.grid(True)
 plt.xlabel(r"ln I$_{\rm int}$ / I$_{\rm SD}$")
 plt.xlim([-2, 2])
 plt.tight_layout()
-plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_14A_vla_ebhis_w_weights.png"))
-plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_14A_vla_ebhis_w_weights.pdf"))
+plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_14A_vla_ebhis_w_weights_v3.png"))
+plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_14A_vla_ebhis_w_weights_v3.pdf"))
 
 print("Factor: {0}+/-{1}".format(sc_factor, sc_err))
-# Factor:
+# Factor: 1.115252652407311+/-0.00041563756216537193
 # This is a bit higher than the factor below where the whole emission isn't
 # quite captured in the VLA mosaic. Would need to re-run but this was ~1.17
 
@@ -138,8 +137,8 @@ plt.grid(True)
 
 plt.tight_layout()
 
-plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_perchan_14A_ebhis_w_weights.png"))
-plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_perchan_14A_ebhis_w_weights.pdf"))
+plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_perchan_14A_ebhis_w_weights_v3.png"))
+plt.savefig(allfigs_path("14A-235_imaging/ratio_hist_perchan_14A_ebhis_w_weights_v3.pdf"))
 plt.close()
 
 # Now refit with the channels near the systemic velocity, where most of the HI
@@ -157,11 +156,11 @@ sc_factor_chrange, sc_err_chrange = \
 plt.grid(True)
 plt.xlabel(r"ln I$_{\rm int}$ / I$_{\rm SD}$")
 plt.tight_layout()
-plt.savefig(allfigs_path(f"14A-235_imaging/ratio_hist_14A_vla_ebhis_chan_{chan_range.start}_{chan_range.stop}_w_weights.png"))
-plt.savefig(allfigs_path(f"14A-235_imaging/ratio_hist_14A_vla_ebhis_chan_{chan_range.start}_{chan_range.stop}_w_weights.pdf"))
+plt.savefig(allfigs_path(f"14A-235_imaging/ratio_hist_14A_vla_ebhis_chan_{chan_range.start}_{chan_range.stop}_w_weights_v3.png"))
+plt.savefig(allfigs_path(f"14A-235_imaging/ratio_hist_14A_vla_ebhis_chan_{chan_range.start}_{chan_range.stop}_w_weights_v3.pdf"))
 
 print("Factor: {0}+/-{1}".format(sc_factor_chrange, sc_err_chrange))
-# Factor: 1.072811583970295+/-0.0007188138089811077
+# Factor: 1.067082747762499+/-0.0006864143680856134
 # Error still underestimated
 
 # The >1 factor is due to some emission in the GBT data being cut-off by the
