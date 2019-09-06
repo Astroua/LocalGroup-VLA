@@ -26,6 +26,9 @@ run_dict = dict(run_BCDtaper_04kms=True,
 
 for key in run_dict:
 
+    if not run_dict[key]:
+        continue
+
     # Change filenames and output plots with key name
     if key == 'run_BCDtaper_04kms':
 
