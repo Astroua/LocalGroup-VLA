@@ -5,8 +5,9 @@ and (optionally) the feathered cube.
 '''
 
 import numpy as np
-from spectral_cube import (SpectralCube, OneDSpectrum,
-                           VaryingResolutionOneDSpectrum)
+from spectral_cube import (SpectralCube, OneDSpectrum,)
+from spectral_cube.lower_dimensional_structures import \
+    VaryingResolutionOneDSpectrum
 import os
 from astropy.io import fits
 import astropy.units as u
@@ -66,8 +67,8 @@ plt.grid(True)
 plt.ylabel("VLA-to-EBHIS Flux Ratio")
 plt.xlabel("Velocity (km / s)")
 plt.tight_layout()
-plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_ratio.png"))
-plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_ratio.pdf"))
+plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_ratio_v3.png"))
+plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_ratio_v3.pdf"))
 plt.close()
 
 # Plot the total spectra
@@ -83,8 +84,8 @@ plt.grid(True)
 plt.ylabel("Total Flux (Jy)")
 plt.xlabel("Velocity (km / s)")
 plt.tight_layout()
-plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery.png"))
-plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery.pdf"))
+plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_v3.png"))
+plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_v3.pdf"))
 plt.close()
 
 plt.plot(vel_axis, total_ebhis_profile,
@@ -99,8 +100,8 @@ plt.ylim([-3, 150])
 plt.ylabel("Total Flux (Jy)")
 plt.xlabel("Velocity (km / s)")
 plt.tight_layout()
-plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_zoom.png"))
-plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_zoom.pdf"))
+plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_zoom_v3.png"))
+plt.savefig(allfigs_path("14A-235_imaging/vla_ebhis_14A_flux_recovery_zoom_v3.pdf"))
 plt.close()
 
 # We've summed up most of the data already. How about a mass estimate?
@@ -153,6 +154,6 @@ ebhis_spec = OneDSpectrum(total_ebhis_profile,
                           meta=spec.meta,
                           beam=ebhis_cube.beam)
 ebhis_spec.write(ebhis_m31_HI_data_path(
-                  "14A-235_items/CAR_C01_14A235_match_04kms_spectralregrid.total_flux_spec.fits", no_check=True))
+                 "14A-235_items/CAR_C01_14A235_match_04kms_spectralregrid.total_flux_spec.fits", no_check=True))
 
 default_figure()
