@@ -12,7 +12,7 @@ from tasks import exportfits
 imgname = sys.argv[-1]
 
 exportfits(imagename=imgname,
-           fitsimage="{0}".format(imgname),
+           fitsimage="{0}.fits".format(imgname),
            dropdeg=True,
            velocity=True,
            optical=False,

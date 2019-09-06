@@ -52,10 +52,10 @@ fifteenA_HI_BC_1_2kms_data_wEBHIS_path = \
 
 fifteenA_HI_BCtaper_04kms_data_path = \
     partial(name_return_check,
-            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_04kms_noSD/"))
+            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_BCD_taper_0_42kms_noSD/"))
 fifteenA_HI_BCtaper_04kms_data_wEBHIS_path = \
     partial(name_return_check,
-            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_04kms_wEBHIS/"))
+            path=os.path.join(m31_data_path, "VLA/15A-175/HI/full_imaging_BCD_taper_0_42kms_wEBHIS/"))
 
 
 ebhis_m31_HI_data_path = \
