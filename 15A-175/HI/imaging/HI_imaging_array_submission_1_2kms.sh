@@ -38,7 +38,7 @@ if (( $stage==1 )); then
     param_file="/home/ekoch/code/LocalGroup-VLA/15A-175/HI/imaging/param_files/15A_B_C_14A_1_2kms.saved"
 elif (( $stage==2 )); then
     script_name="${HOME}/code/LocalGroup-VLA/15A-175/HI/imaging/HI_single_channel_clean_stage2.py"
-    param_file="/home/ekoch/code/LocalGroup-VLA/15A-175/HI/imaging/param_files/M31_15A_1_2kms_stage2.saved"
+    param_file="/home/ekoch/code/LocalGroup-VLA/15A-175/HI/imaging/param_files/15A_B_C_14A_1_2kms_stage2.saved"
 else
     echo "Stage must be 1 or 2, not ${stage}".
     exit 1
