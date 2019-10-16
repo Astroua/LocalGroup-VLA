@@ -19,10 +19,9 @@ from paths import (fifteenA_HI_BC_1_2kms_data_path,
 from constants import hi_freq
 
 num_cores = 1
-chunk = 250
 
-run_dict = dict(run_BCDtaper_04kms=True,
-                run_BCD_1_2kms=False)
+run_dict = dict(run_BCDtaper_04kms=False,
+                run_BCD_1_2kms=True)
 
 for key in run_dict:
 
@@ -31,6 +30,8 @@ for key in run_dict:
 
     # Change filenames and output plots with key name
     if key == 'run_BCDtaper_04kms':
+
+        chunk = 250
 
         vla_cube = SpectralCube.read(fifteenA_HI_BCtaper_04kms_data_path("M31_15A_B_C_14A_HI_contsub_width_0_4kms.image.fits"))
 
@@ -47,19 +48,18 @@ for key in run_dict:
 
     elif key == 'run_BCD_1_2kms':
 
-        # TODO: update file names. Will safely fail here now.
-        vla_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_14A_HI_contsub_width_04kms.image.fits"))
+        chunk = 100
 
-        pb_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_14A_HI_contsub_width_04kms.pb.fits"))
+        vla_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_15A_B_C_14A_HI_contsub_width_1_2kms.image.fits"))
 
-        # weight = pb_cube[0].value
+        pb_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_15A_B_C_14A_HI_contsub_width_1_2kms.pb.fits"))
 
         ebhis_name = ebhis_m31_HI_data_path(
                           "15A-175_items/CAR_C01_15A175_match_12kms_spectralregrid.fits")
         ebhis_cube = SpectralCube.read(ebhis_name)
 
-        raise NotImplementedError("")
-        save_name = fifteenA_HI_BC_1_2kms_data_wEBHIS_path("M31_15A_B_C_14A_HI_contsub_width_0_4kms.image.pbcor.EBHIS_feathered.fits", no_check=True)
+        # raise NotImplementedError("")
+        save_name = fifteenA_HI_BC_1_2kms_data_wEBHIS_path("M31_15A_B_C_14A_HI_contsub_width_1_2kms.image.pbcor.EBHIS_feathered.fits", no_check=True)
 
         output_path = fifteenA_HI_BC_1_2kms_data_wEBHIS_path("", no_check=True)
 

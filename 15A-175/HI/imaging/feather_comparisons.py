@@ -24,8 +24,8 @@ from paths import (fifteenA_HI_BC_1_2kms_data_path,
 from constants import hi_freq
 from plotting_styles import onecolumn_figure
 
-run_dict = dict(run_BCDtaper_04kms=True,
-                run_BCD_1_2kms=False)
+run_dict = dict(run_BCDtaper_04kms=False,
+                run_BCD_1_2kms=True)
 
 # We need to define a tapered weighting function to ignore emission outside
 # of the VLA mosaic
@@ -49,6 +49,12 @@ def taper_weights(mask, sigma, nsig_cut=3):
 
 for key in run_dict:
 
+    print(f"On {key}")
+
+    if not run_dict[key]:
+        print('Skipping.')
+        continue
+
     # Change filenames and output plots with key name
     if key == 'run_BCDtaper_04kms':
 
@@ -67,15 +73,18 @@ for key in run_dict:
     elif key == 'run_BCD_1_2kms':
 
         # TODO: update file names. Will safely fail here now.
-        vla_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_14A_HI_contsub_width_04kms.image.fits"))
+        vla_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_15A_B_C_14A_HI_contsub_width_1_2kms.image.fits"))
 
-        pb_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_14A_HI_contsub_width_04kms.pb.fits"))
+        pb_cube = SpectralCube.read(fifteenA_HI_BC_1_2kms_data_path("M31_15A_B_C_14A_HI_contsub_width_1_2kms.pb.fits"))
 
         # weight = pb_cube[0].value
 
         ebhis_name = ebhis_m31_HI_data_path(
                           "15A-175_items/CAR_C01_15A175_match_12kms_spectralregrid.fits")
         ebhis_cube = SpectralCube.read(ebhis_name)
+
+        chan_range = slice(50, 200)
+
 
     else:
         raise ValueError("")
@@ -123,7 +132,7 @@ for key in run_dict:
     # For 0.4 km/s tapered:
     # Factor: 0.619969810731763+/-0.0021213320488624064
     # For 1.2 km/s:
-    # Factor: XXX
+    # Factor: 0.5509672856367774+/-0.004333323268235445
 
     plt.close()
 
@@ -193,7 +202,7 @@ for key in run_dict:
     # Factor: Factor: 0.7365773477333422+/-0.002633281329603794
 
     # For 1.2 km/s:
-    # Factor: XXX
+    # Factor: 0.6794204263603334+/-0.005574160643158663
     # Error still underestimated
 
     # These are poor fits. Will need to look into with more detail.
