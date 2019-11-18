@@ -224,6 +224,11 @@ for chan in range(start, end):
     concat_ms = os.path.join(ind_chan_path,
                              concat_vis_name)
 
+    # Does it exist already? If yes, skip
+    if os.path.exists(concat_ms):
+        casalog.post("Channel {} already has an concatenated MS. Skipping.".format(chan))
+        continue
+
     if use_parallel:
         out_channel = os.path.join(out_path, "channel_{}".format(chan))
         if not os.path.exists(out_channel):
