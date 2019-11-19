@@ -239,6 +239,7 @@ for chan in range(start, end):
             if os.path.exists(scratch_ms):
                 casalog.post("Found the split + concat MS for {} in scratch. "
                              "Skipping.".format(chan))
+                continue
 
     chan_mss = []
 
