@@ -57,7 +57,7 @@ casa-release-5.4.1-32.el7/bin/mpicasa -n 32 casa-release-5.4.1-32.el7/bin/casa -
 # Local run example
 # ~/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/ownCloud/code_development/LocalGroup-VLA/15A-175/HI/imaging/match_and_split.py False 0.42 0 10 .
 
-# echo "Copy back to scratch"
-# cp -r ${out_chan_folder}/* ${scratch_path}/${out_chan_folder}/
+echo "Copy back to scratch"
+cp -r ${out_chan_folder}/* ${scratch_path}/${out_chan_folder}/
 
 echo "DONE ${job_num}!"
