@@ -52,7 +52,7 @@ cp -r $scratch_path/M31_14A-235_15Afields_HI_spw_0_LSRK_freqmatch.ms.contsub .
 
 mkdir ${out_chan_folder}
 
-casa-release-5.4.1-32.el7/bin/mpicasa -n 32 casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/15A-175/HI/imaging/match_and_split.py True 0.42 $job_num 10 ${scratch_path}/${out_chan_folder}/
+casa-release-5.4.1-32.el7/bin/mpicasa -n 32 casa-release-5.4.1-32.el7/bin/casa --rcdir ${rc_path} --nologger --nogui --log2term --nocrashreport -c $HOME/code/LocalGroup-VLA/15A-175/HI/imaging/match_and_split.py True 0.42 $job_num 10 ${scratch_path}/${out_chan_folder}/
 
 # Local run example
 # ~/casa-release-5.4.1-32.el7/bin/casa --nologger --nogui --log2term --nocrashreport -c $HOME/ownCloud/code_development/LocalGroup-VLA/15A-175/HI/imaging/match_and_split.py False 0.42 0 10 .
