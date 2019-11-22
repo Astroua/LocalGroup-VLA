@@ -19,7 +19,7 @@ def name_return_check(filename, path, no_check=False):
 
 if socket.gethostname() == 'ewk':
     root = os.path.expanduser('~/ownCloud/code_development/LocalGroup-VLA/')
-    m31_data_path = "/home/eric/bigdata/ekoch/M31/"
+    m31_data_path = "/home/eric/cirrus/bigdata/ekoch/M31/"
 # NRAO
 elif "nmpost" in socket.gethostname():
     root = os.path.expanduser("~/LocalGroup-VLA")
