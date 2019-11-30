@@ -1,5 +1,5 @@
 taskname           = "tclean"
-vis                =  '14A_15A_HI_LSRK.ms.contsub'
+vis                =  '14A_15A_HI_LSRK.ms'
 selectdata         =  True
 field              =  "M31*"
 spw                =  "0,1"
