@@ -46,7 +46,7 @@ for i in range(1, 24):
         wfcuv_275 = f"hlsp_phat_hst_wfc3-uvis_{brick_dict[i]}-m31-b0{i}_f275w_v1_drz.fits"
         wfcuv_336 = f"hlsp_phat_hst_wfc3-uvis_{brick_dict[i]}-m31-b0{i}_f336w_v1_drz.fits"
     else:
-        brickurl = "{baseurl}/brick{i}"
+        brickurl = f"{baseurl}/brick{i}"
 
         acs_475 = f"hlsp_phat_hst_acs-wfc_{brick_dict[i]}-m31-b{i}_f475w_v1_drz.fits"
         acs_814 = f"hlsp_phat_hst_acs-wfc_{brick_dict[i]}-m31-b{i}_f814w_v1_drz.fits"
