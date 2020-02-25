@@ -7,7 +7,7 @@ from astropy import log
 from cube_analysis import run_pipeline
 
 
-run_042kms = False
+run_042kms = True
 run_1_2kms = True
 
 num_cores = 4
@@ -17,6 +17,9 @@ if run_042kms:
 
     from paths import (fifteenA_HI_BCtaper_04kms_data_path,
                        fifteenA_HI_BCtaper_04kms_data_wEBHIS_path)
+
+    mw_hi_mask = fifteenA_HI_BCtaper_04kms_data_wEBHIS_path("M31_15A_taper_interactive_mask.fits")
+
     # VLA-only cube
     log.info("Masking and moments for the VLA-only cube")
     run_pipeline(fifteenA_HI_BCtaper_04kms_data_path("M31_15A_B_C_14A_HI_contsub_width_0_4kms.image.pbcor.fits"),
@@ -25,6 +28,9 @@ if run_042kms:
                  pb_lim=0.05,
                  apply_pbmasking=False,
                  convolve_to_common_beam=False,
+                 convert_to_K=True,
+                 skip_existing_mask=True,
+                 custom_mask_name=mw_hi_mask,
                  masking_kwargs={"method": "ppv_connectivity",
                                  "save_cube": True,
                                  "is_huge": True,
@@ -49,6 +55,9 @@ if run_042kms:
                  pb_lim=0.05,
                  apply_pbmasking=False,
                  convolve_to_common_beam=False,
+                 convert_to_K=True,
+                 skip_existing_mask=True,
+                 custom_mask_name=mw_hi_mask,
                  masking_kwargs={"method": "ppv_connectivity",
                                  "save_cube": True,
                                  "is_huge": True,
@@ -74,6 +83,9 @@ if run_1_2kms:
     from paths import (fifteenA_HI_BC_1_2kms_data_path,
                        fifteenA_HI_BC_1_2kms_data_wEBHIS_path)
 
+    mw_hi_mask = fifteenA_HI_BC_1_2kms_data_wEBHIS_path("M31_15A_interactive_mask.fits")
+
+
     log.info("Masking and moments for the VLA-only cube")
     run_pipeline(fifteenA_HI_BC_1_2kms_data_path("M31_15A_B_C_14A_HI_contsub_width_1_2kms.image.pbcor.fits"),
                  fifteenA_HI_BC_1_2kms_data_path("", no_check=True),
@@ -82,6 +94,8 @@ if run_1_2kms:
                  apply_pbmasking=False,
                  convolve_to_common_beam=False,
                  convert_to_K=True,
+                 skip_existing_mask=True,
+                 custom_mask_name=mw_hi_mask,
                  masking_kwargs={"method": "ppv_connectivity",
                                  "save_cube": True,
                                  "is_huge": True,
@@ -109,6 +123,8 @@ if run_1_2kms:
                  apply_pbmasking=False,
                  convolve_to_common_beam=False,
                  convert_to_K=True,
+                 skip_existing_mask=True,
+                 custom_mask_name=mw_hi_mask,
                  masking_kwargs={"method": "ppv_connectivity",
                                  "save_cube": True,
                                  "is_huge": True,
@@ -126,5 +142,3 @@ if run_1_2kms:
                                 "smooth_size": 1,
                                 "spectral_slice": slice(0, 257)},
                  combeam_kwargs={})
-
-    raise NotImplementedError("")
