@@ -25,6 +25,9 @@ if run_042kms:
                  pb_lim=0.05,
                  apply_pbmasking=False,
                  convolve_to_common_beam=False,
+                 convert_to_K=True,
+                 skip_existing_mask=True,
+                 custom_mask_name=fourteenA_HI_data_wEBHIS_path("M31_14A_HI_contsub_width_04kms.image.pbcor.EBHIS_feathered_interactive_mask.fits", no_check=True),
                  masking_kwargs={"method": "ppv_connectivity",
                                  "save_cube": True,
                                  "is_huge": True,
@@ -37,8 +40,9 @@ if run_042kms:
                                  },
                  moment_kwargs={"num_cores": num_cores,
                                 "verbose": True,
-                                "chunk_size": 1e5,
-                                "make_peakvels": False},
+                                "chunk_size": 1e6,
+                                "make_peakvels": True,
+                                "smooth_size": 1},
                  combeam_kwargs={})
 
     # VLA+GBT cube
@@ -49,6 +53,9 @@ if run_042kms:
                  pb_lim=0.05,
                  apply_pbmasking=False,
                  convolve_to_common_beam=False,
+                 convert_to_K=True,
+                 skip_existing_mask=True,
+                 custom_mask_name=fourteenA_HI_data_wEBHIS_path("M31_14A_HI_contsub_width_04kms.image.pbcor.EBHIS_feathered_interactive_mask.fits", no_check=True),
                  masking_kwargs={"method": "ppv_connectivity",
                                  "save_cube": True,
                                  "is_huge": True,
@@ -61,6 +68,7 @@ if run_042kms:
                                  },
                  moment_kwargs={"num_cores": num_cores,
                                 "verbose": True,
-                                "chunk_size": 1e5,
-                                "make_peakvels": False},
+                                "chunk_size": 1e6,
+                                "make_peakvels": True,
+                                "smooth_size": 1},
                  combeam_kwargs={})
