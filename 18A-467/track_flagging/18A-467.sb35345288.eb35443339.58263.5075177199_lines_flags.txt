@@ -1,0 +1,4 @@
+# 18A-467.sb35345288.eb35443339.58263.5075177199 Line SPWs
+
+# Poor bandpass solution. Nothing else obviously wrong to try and improve.
+mode='manual' antenna='ea24'

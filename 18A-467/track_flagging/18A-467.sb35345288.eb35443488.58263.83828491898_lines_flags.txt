@@ -1,0 +1,8 @@
+# 18A-467.sb35345288.eb35443488.58263.83828491898 Line SPWs
+
+# Poor bandpass solution. Nothing else obviously wrong to try and improve.
+mode='manual' antenna='ea24'
+
+# Flag a few bad integrations
+mode='manual' timerange='>20:19:03' scan='2'
+mode='manual' timerange='<21:17:34' scan='15'
